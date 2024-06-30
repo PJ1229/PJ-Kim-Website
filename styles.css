@@ -1,0 +1,32 @@
+body {
+    /* temporary */
+    /* outline: 2px solid red; */
+
+    /* format */
+    flex: auto;
+    margin: auto;
+    border: none;
+
+    /* font */
+    font-family: "Figtree", serif;
+    font-size: 48px;
+
+    /* text */
+    text-wrap: wrap;
+    text-align: left;
+}
+
+h1[type="title"]{
+    /* margin */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    /* color */
+    color: rgba(0,0,0,0.5);
+
+    /* font */
+    font-size: 48px;
+    font-weight: normal;
+}
