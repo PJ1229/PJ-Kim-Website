@@ -13,87 +13,46 @@ body {
     text-align: left;
 }
 
-img[type="intro"]{
-    /* Margin */
-    margin-left: 0px;
-    /* Size */
+@keyframes move {
+	to {
+		/* Move horizontally so that right edge is aligned against the viewport */
+		transform: translateX(calc(-100% + 100vw));
+	}
 }
 
-div{
-    /* Temporary 
-    background-color: red;*/
+#sectionPin {
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	height: 500vh;
+	overflow: visible; /* To make position sticky work … */
 
-    /* Position */
-    position: relative;
-
-    /* Text */
-    text-wrap: nowrap;
-
-    /* Margin */
-    margin: 0px;
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
 }
 
-div[type="title"] {
-    /* Color */
-    color: rgba(0, 0, 0, .5);
-
-    /* Font */
-    font-size: 48px;
-    font-weight: normal;
+.title {
+    height: 100vh;
 }
 
-div[type="body"]{
-    /* Color */
-    color: rgba(0, 0, 0, .25);
+.pin-wrap-sticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
 
-    /* Font */
-    font-size: 24px;
-    font-weight: normal;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
-@keyframes title {
-    0% {
-        color: rgba(0, 0, 0, 0);
-        left: 0px;
-        top: -32px;
-    }
-    100% {
-        color: rgba(0, 0, 0, .5);
-        left: 0px;
-        top: 0px;
-    }
-}
+.pin-wrap {
+	height: 100vh;
+	width: 250vmax;
 
-.float-container {
-    /* Margin */
-    margin-left: 10px;
-    margin-top: 10px;
-}
+	/* Hook animation */
+	will-change: transform;
+	animation: linear move forwards;
 
-.float-child {
-    width: 50%;
-    float: left;
-}
-
-#title1 {
-    /* Size */
-    width: 140px;
-    height: 64px;
-
-    /* Animation */
-    animation-name: title;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-}
-
-#title2 {
-    /* Size */
-    height: 64px;
-
-    /* Animation */
-    animation-name: title;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
 }
