@@ -18,6 +18,18 @@
 	}
 }
 
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: .5;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
 #sectionPin {
 	height: 500vh;
 	overflow: visible; /* To make position sticky work … */
@@ -120,24 +132,27 @@
 	text-align: center;
 }
 
-/*
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background: black; 
-}
-
-::-webkit-scrollbar-thumb {
-	background: rgba(255,255,255,.4); 
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: rgba(255,255,255,.2); 
-}
-*/
-
 ::-webkit-scrollbar {
 	display: none;
+}
+
+.in-view{
+	animation: fade 4s 4s infinite both;
+}
+
+.out-view{
+	opacity: 0;
+}
+
+#scroll-down{
+	text-align: center; 
+	position: absolute; 
+	width: 100%; 
+	font-size: 24px;
+}
+
+#scroll-right{
+	position: absolute; 
+	left: 10%;
+	top:90%
 }
