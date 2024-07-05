@@ -45,7 +45,7 @@
 .title-center{
     text-align: center; 
     width: 100%; 
-    top: 33%; 
+    top: 33%;
     position: absolute;
     font-size: 48px;
 	animation: fade-in 2s ease-in-out 1;
@@ -101,8 +101,11 @@
 
 .container {
 	position: absolute;
-	width: 10%;
-	top: 25%;
+	height: auto;
+	top: 50%;
+    transform: translate(0, -50%);
+    width: 10%;
+    object-fit: cover;
 }
 .overlay {
 	position: absolute;
