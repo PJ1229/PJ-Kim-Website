@@ -20,6 +20,18 @@
     }
 }
 
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
 @keyframes drop-fade {
     0% {
         opacity: 0;
@@ -121,8 +133,8 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.8);
+    transition: opacity .5s ease, transform .5s ease;
+    background-color: rgba(255, 255, 255, 1);
     transform: translateY(-20%);
 }
 
@@ -156,7 +168,7 @@
 }
 
 .in-view-img {
-    animation: drop-fade 1s forwards;
+    animation: drop-fade .5s forwards;
 }
 
 .out-view-img {
