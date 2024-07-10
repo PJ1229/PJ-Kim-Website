@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('.title');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // Calculate the scroll position relative to the viewport height
+        const clampedScrollPosition = Math.max(0, Math.min(1, scrollTop / windowHeight));
+
+        // Apply the opacity based on scroll position
+        title.style.opacity = 1 - clampedScrollPosition;
+    });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {

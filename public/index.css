@@ -14,22 +14,16 @@
     scroll-behavior: smooth;
 }
 
-@keyframes move {
-    to {
-        transform: translateX(calc(-100% + 100vw));
+@keyframes fade {
+    0% {
+        opacity: 0;
     }
-}
-
-@keyframes fade{
-	0%{
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes drop-fade {
@@ -43,26 +37,27 @@
     }
 }
 
-#sectionPin {
-    height: 500vh;
-    overflow: visible; /* To make position sticky work … */
-
-    view-timeline-name: --section-pin-tl;
-    view-timeline-axis: block;
-}
-
 .title {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .title-center {
     text-align: center;
-    width: 100%;
-    top: 40%;
-    position: absolute;
     font-size: 48px;
     color: white;
-    animation: fade-in 2s ease-in-out 1;
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+#scroll-down {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
+    animation: fade 4s 4s infinite both;
 }
 
 .pin-wrap-sticky {
@@ -76,7 +71,7 @@
 
 .pin-wrap {
     height: 100vh;
-    width: 300vmax;
+    width: 100%;
 
     /* Hook animation */
     will-change: transform;
@@ -85,17 +80,6 @@
     /* Link animation to view-timeline */
     animation-timeline: --section-pin-tl;
     animation-range: contain 0% contain 100%;
-}
-
-@keyframes fade-in {
-    0% {
-        color: rgba(0, 0, 0, 0);
-        top: 0%;
-    }
-    100% {
-        color: rgba(255, 255, 255, 1);
-        top: 40%;
-    }
 }
 
 .imageBox {
@@ -173,11 +157,4 @@
 
 .out-view-img {
     opacity: 0;
-}
-
-#scroll-down {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    font-size: 24px;
 }
