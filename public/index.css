@@ -10,6 +10,8 @@
     /* Text */
     text-wrap: wrap;
     text-align: left;
+
+	scroll-behavior: smooth;
 }
 
 @keyframes move {
@@ -45,9 +47,10 @@
 .title-center{
     text-align: center; 
     width: 100%; 
-    top: 33%;
+    top: 40%;
     position: absolute;
     font-size: 48px;
+	color: white;
 	animation: fade-in 2s ease-in-out 1;
 }
 
@@ -76,7 +79,7 @@
 
 @keyframes fade-in {
 	0% {color: rgba(0,0,0,0); top: 0%;}
-	100% {color: rgba(0,0,0,1); top: 33%;}
+	100% {color: rgba(255,255,255,1); top: 40%;}
 }
 
 .imageBox {
