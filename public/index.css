@@ -11,148 +11,177 @@
     text-wrap: wrap;
     text-align: left;
 
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 @keyframes move {
-	to {
-		transform: translateX(calc(-100% + 100vw));
-	}
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
 }
 
-@keyframes fade{
-	0%{
-		opacity: 0;
-	}
-	50%{
-		opacity: .5;
-	}
-	100%{
-		opacity: 0;
-	}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes drop-fade {
+    0% {
+        opacity: 0;
+        top: -100%;
+        transform: translate(0, -100%);
+    }
+    100% {
+        opacity: 1;
+        top: 0%;
+        transform: translate(0, 0%);
+    }
 }
 
 #sectionPin {
-	height: 500vh;
-	overflow: visible; /* To make position sticky work … */
+    height: 500vh;
+    overflow: visible; /* To make position sticky work … */
 
-	view-timeline-name: --section-pin-tl;
-	view-timeline-axis: block;
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
 }
 
 .title {
     height: 100vh;
 }
 
-.title-center{
-    text-align: center; 
-    width: 100%; 
+.title-center {
+    text-align: center;
+    width: 100%;
     top: 40%;
     position: absolute;
     font-size: 48px;
-	color: white;
-	animation: fade-in 2s ease-in-out 1;
+    color: white;
+    animation: fade-in 2s ease-in-out 1;
 }
 
 .pin-wrap-sticky {
-	/* Stick to Top */
-	height: 100vh;
-	width: 100vw;
-	position: sticky;
-	top: 0;
-	overflow-x: hidden;
+    /* Stick to Top */
+    height: 100vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
 }
 
 .pin-wrap {
-	height: 100vh;
-	width: 300vmax;
+    height: 100vh;
+    width: 300vmax;
 
+    /* Hook animation */
+    will-change: transform;
+    animation: linear move forwards;
 
-	/* Hook animation */
-	will-change: transform;
-	animation: linear move forwards;
-
-	/* Link animation to view-timeline */
-	animation-timeline: --section-pin-tl;
-	animation-range: contain 0% contain 100%;
+    /* Link animation to view-timeline */
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
 }
 
 @keyframes fade-in {
-	0% {color: rgba(0,0,0,0); top: 0%;}
-	100% {color: rgba(255,255,255,1); top: 40%;}
+    0% {
+        color: rgba(0, 0, 0, 0);
+        top: 0%;
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        top: 40%;
+    }
 }
 
 .imageBox {
-	position: relative;
-	float: left;
+    position: relative;
+    float: left;
 }
 
 .imageBox .hoverImg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
 }
 
 .imageBox:hover .hoverImg {
-	display: block;
-}
-
-.imageBox:hover .hoverImg {
-	display: block;
+    display: block;
 }
 
 .container {
-	position: absolute;
-	height: auto;
-	top: 50%;
+    position: absolute;
+    height: auto;
+    top: 50%;
     transform: translate(0, -50%);
     width: 10%;
     object-fit: cover;
 }
+
 .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
 }
 
 .container:hover .overlay {
-	opacity: .8;
+    opacity: .8;
 }
+
 .text {
-	color: black;
-	font-size: 48px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
+    color: black;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
-	display: none;
+    display: none;
 }
 
-.in-view{
-	animation: fade 4s 4s infinite both;
+.in-view-arrow {
+    animation: fade 4s 4s infinite both;
 }
 
-.out-view{
-	opacity: 0;
+.out-view-arrow {
+    opacity: 0;
 }
 
-#scroll-down{
-	text-align: center; 
-	position: absolute; 
-	width: 100%; 
-	font-size: 24px;
+.in-view-img,
+.in-view-overlay {
+    animation-name: drop-fade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.out-view-img,
+.out-view-overlay {
+    opacity: 0;
+}
+
+#scroll-down {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
 }
