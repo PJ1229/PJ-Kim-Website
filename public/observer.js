@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title');
 
     // Define your opacity multiplier here
-    const opacityMultiplier = .5; // Change this value to adjust the fade rate
-    const translationMultiplier = .5; // Adjust the multiplier for the background movement
+    const opacityMultiplier = .75; // Change this value to adjust the fade rate (1 is a full range from 1 to 0)
+    const translationMultiplier = 0.5; // Adjust this for background position movement
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -11,15 +11,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Calculate the scroll position relative to the viewport height
         const clampedScrollPosition = Math.max(0, Math.min(1, scrollTop / windowHeight));
-        const translateY = scrollTop * translationMultiplier; 
 
-        // Apply the opacity based on scroll position and the opacity multiplier
-        title.style.opacity = 1 - (clampedScrollPosition * opacityMultiplier);
+        // Adjust opacity based on scroll position
+        const opacity = 1 - (clampedScrollPosition * opacityMultiplier);
+        title.style.opacity = opacity;
+
+        // Debug log to check opacity value
+        console.log('Opacity:', opacity);
+
+        // Adjust background position based on scroll
+        const translateY = scrollTop * translationMultiplier;
         title.style.backgroundPositionY = `-${translateY}px`;
     });
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelector('.buttons');
+
+    // Define your translation multiplier here
+    const translationMultiplier = .25; // Change this value to adjust the speed of the scrolling effect
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+
+        // Calculate the translation based on scroll position and the translation multiplier
+        const translateY = scrollTop * translationMultiplier; 
+
+        // Apply the translation using transform property
+        if (buttons) {
+            buttons.style.transform = `translateY(${translateY}px)`;
+        }
+    });
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {

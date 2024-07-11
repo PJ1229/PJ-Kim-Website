@@ -15,10 +15,10 @@
 }
 
 @keyframes fade {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
@@ -127,7 +127,19 @@
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255,255,255,.4); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255,255,255,.2); 
 }
 
 .in-view-arrow {
@@ -146,21 +158,23 @@
     opacity: 0;
 }
 
+/* Adjusted triangle styles */
 .triangle-left, .triangle-right {
+    top: -50vh;
     width: 0;
     height: 0;
     position: absolute;
-    top: 100vh;
+    bottom: 0; /* Ensure triangles are at the bottom */
 }
 
 .triangle-left {
-    border-bottom: 25vh solid red; /* Full viewport height */
-    border-right: 50vw solid transparent; /* Half viewport width */
-    left: 0;
+    right: 0;
+    border-top: 50vh solid transparent; /* Full viewport height */
+    border-right: 50vw solid white; /* Half viewport width */
 }
 
 .triangle-right {
-    border-bottom: 25vh solid red; /* Full viewport height */
-    border-left: 50vw solid transparent; /* Half viewport width */
-    right: 0;
+    left: 0; /* Ensure it aligns to the right */
+    border-top: 50vh solid transparent; /* Full viewport height */
+    border-left: 50vw solid white; /* Half viewport width */
 }
