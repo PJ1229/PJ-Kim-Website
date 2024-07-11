@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelector('.buttons');
 
     // Define your translation multiplier here
-    const translationMultiplier = .25; // Change this value to adjust the speed of the scrolling effect
+    const translationMultiplier = -1.75; // Change this value to adjust the speed of the scrolling effect
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;

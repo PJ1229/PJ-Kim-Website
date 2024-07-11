@@ -59,6 +59,7 @@
     font-size: 48px;
     color: white;
     animation: fade 2.5s 1;
+    margin-top: 40vh;
 }
 
 #scroll-down {
@@ -127,7 +128,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 15px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -160,7 +161,7 @@
 
 /* Adjusted triangle styles */
 .triangle-left, .triangle-right {
-    top: -50vh;
+    top: 50vh;
     width: 0;
     height: 0;
     position: absolute;
