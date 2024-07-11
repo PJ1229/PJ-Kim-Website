@@ -160,8 +160,7 @@
 }
 
 /* Adjusted triangle styles */
-.triangle-left, .triangle-right {
-    top: 50vh;
+.triangle-left, .triangle-right, .triangle-left-inverted, .triangle-right-inverted {
     width: 0;
     height: 0;
     position: absolute;
@@ -170,12 +169,24 @@
 
 .triangle-left {
     right: 0;
-    border-top: 100vh solid transparent; /* Full viewport height */
-    border-right: 100vw solid white; /* Half viewport width */
+    border-top: 100vh solid transparent; 
+    border-right: 100vw solid rgba(251, 206, 177, 1); 
 }
 
 .triangle-right {
     left: 0; /* Ensure it aligns to the right */
-    border-top: 100vh solid transparent; /* Full viewport height */
-    border-left: 100vw solid white; /* Half viewport width */
+    border-top: 100vh solid transparent; 
+    border-left: 100vw solid rgba(251, 206, 177, 1); 
+}
+
+.triangle-left-inverted {
+    left: 0;
+    border-bottom: 50vh solid transparent; /* Half viewport height */
+    border-right: 50vw solid rgba(251, 206, 177, 1); /* Half viewport width */
+}
+
+.triangle-right-inverted {
+    right: 0; /* Ensure it aligns to the right */
+    border-bottom: 50vh solid transparent; /* Half viewport height */
+    border-left: 50vw solid rgba(251, 206, 177, 1); /* Half viewport width */
 }
