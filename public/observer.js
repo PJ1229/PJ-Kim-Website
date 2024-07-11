@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title');
 
+    // Define your opacity multiplier here
+    const opacityMultiplier = .5; // Change this value to adjust the fade rate
+    const translationMultiplier = .5; // Adjust the multiplier for the background movement
+
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
         const windowHeight = window.innerHeight;
 
         // Calculate the scroll position relative to the viewport height
         const clampedScrollPosition = Math.max(0, Math.min(1, scrollTop / windowHeight));
+        const translateY = scrollTop * translationMultiplier; 
 
-        // Apply the opacity based on scroll position
-        title.style.opacity = 1 - clampedScrollPosition;
+        // Apply the opacity based on scroll position and the opacity multiplier
+        title.style.opacity = 1 - (clampedScrollPosition * opacityMultiplier);
+        title.style.backgroundPositionY = `-${translateY}px`;
     });
 });
 
