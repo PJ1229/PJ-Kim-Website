@@ -179,14 +179,21 @@
     border-left: 100vw solid rgba(251, 206, 177, 1); 
 }
 
+.triangle-left-inverted, .triangle-right-inverted {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 0 solid transparent;
+    border-bottom: 100vh solid transparent;
+    bottom: 0; /* Ensure they align at the bottom */
+}
+
 .triangle-left-inverted {
-    left: 0;
-    border-bottom: 50vh solid transparent; /* Half viewport height */
-    border-right: 50vw solid rgba(251, 206, 177, 1); /* Half viewport width */
+    right: 0;
+    border-right: 100vw solid rgba(251, 206, 177, 1);
 }
 
 .triangle-right-inverted {
-    right: 0; /* Ensure it aligns to the right */
-    border-bottom: 50vh solid transparent; /* Half viewport height */
-    border-left: 50vw solid rgba(251, 206, 177, 1); /* Half viewport width */
+    left: 0;
+    border-left: 100vw solid rgba(251, 206, 177, 1);
 }
