@@ -170,12 +170,12 @@
 
 .triangle-left {
     right: 0;
-    border-top: 50vh solid transparent; /* Full viewport height */
-    border-right: 50vw solid white; /* Half viewport width */
+    border-top: 100vh solid transparent; /* Full viewport height */
+    border-right: 100vw solid white; /* Half viewport width */
 }
 
 .triangle-right {
     left: 0; /* Ensure it aligns to the right */
-    border-top: 50vh solid transparent; /* Full viewport height */
-    border-left: 50vw solid white; /* Half viewport width */
+    border-top: 100vh solid transparent; /* Full viewport height */
+    border-left: 100vw solid white; /* Half viewport width */
 }
