@@ -38,7 +38,7 @@
 @keyframes drop-fade {
     0% {
         opacity: 0;
-        transform: translateY(-50%);
+        transform: translateY(-100%);
     }
     100% {
         opacity: 1;
@@ -88,12 +88,9 @@
 
 .container {
     position: absolute;
-    height: auto;
-    top: 150%;
-    transform: translate(0, -150%);
-    width: 10%;
     object-fit: cover;
     overflow: hidden;
+    z-index: 4; 
 }
 
 .overlay {
@@ -105,9 +102,9 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
     background-color: rgba(255, 255, 255, 1);
-    transform: translateY(-20%);
+    transform: translateY(-100%);
 }
 
 .container:hover .overlay {
@@ -152,7 +149,7 @@
 }
 
 .in-view-img {
-    animation: drop-fade 1s forwards;
+    animation: fade 2s forwards;
 }
 
 .out-view-img {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define your opacity multiplier here
     const opacityMultiplier = 0.75; // Change this value to adjust the fade rate (1 is a full range from 1 to 0)
-    const translationMultiplier = -0.5; // Adjust this for background position movement
+    const translationMultiplier = -.5; // Adjust this for background position movement
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-    const tags = document.querySelectorAll('img.drop-down');
+    const tags = document.querySelectorAll('div.container');
     console.log(tags);  // Log the NodeList of drop-down images
 
     tags.forEach((tag) => {
