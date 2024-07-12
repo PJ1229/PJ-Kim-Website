@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-    const tags = document.querySelectorAll('div.container');
+    const tags = document.querySelectorAll('button.container');
     console.log(tags);  // Log the NodeList of drop-down images
 
     tags.forEach((tag) => {
