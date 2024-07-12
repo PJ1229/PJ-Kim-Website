@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define your opacity multiplier here
     const opacityMultiplier = 0.75; // Change this value to adjust the fade rate (1 is a full range from 1 to 0)
     const translationMultiplier = 0.5; // Adjust this for background position movement
-    const bottomTranslationMultiplier = 0.5; // Adjust this for background position movement for the bottom section
+    const bottomTranslationMultiplier = -0.5; // Adjust this for background position movement for the bottom section
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title.style.backgroundPositionY = `-${translateY}px`;
 
         // Adjust opacity based on scroll position for the bottom section
-        const bottomScrollStart = windowHeight * 1; // Start point for bottom section to begin appearing
+        const bottomScrollStart = windowHeight * .675; // Start point for bottom section to begin appearing
         const bottomScrollPosition = Math.max(0, scrollTop - bottomScrollStart);
         const bottomScrollProgress = Math.min(1, bottomScrollPosition / windowHeight);
         const bottomSectionOpacity = bottomScrollProgress;
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
