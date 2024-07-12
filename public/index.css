@@ -170,13 +170,13 @@
 .triangle-left {
     right: 0;
     border-top: 100vh solid transparent; 
-    border-right: 100vw solid rgba(251, 206, 177, 1); 
+    border-right: 100vw solid rgba(251, 206, 177, .5); 
 }
 
 .triangle-right {
     left: 0; /* Ensure it aligns to the right */
     border-top: 100vh solid transparent; 
-    border-left: 100vw solid rgba(251, 206, 177, 1); 
+    border-left: 100vw solid rgba(251, 206, 177, .5); 
 }
 
 .triangle-left-inverted, .triangle-right-inverted {
@@ -190,10 +190,10 @@
 
 .triangle-left-inverted {
     right: 0;
-    border-right: 100vw solid rgba(251, 206, 177, 1);
+    border-right: 100vw solid rgba(251, 206, 177, .5);
 }
 
 .triangle-right-inverted {
     left: 0;
-    border-left: 100vw solid rgba(251, 206, 177, 1);
+    border-left: 100vw solid rgba(251, 206, 177, .5);
 }
