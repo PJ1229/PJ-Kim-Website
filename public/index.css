@@ -103,7 +103,7 @@
     width: 100%;
     opacity: 0;
     transition: opacity 1.5s ease, transform 1.5s ease;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(233, 116, 81);
     transform: translateY(-100%);
 }
 
