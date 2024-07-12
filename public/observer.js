@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title.style.opacity = opacity;
 
         // Debug log to check opacity value
-        console.log('Opacity:', opacity);
+        //console.log('Opacity:', opacity);
 
         // Adjust background position based on scroll for the top section
         const translateY = scrollTop * translationMultiplier;
