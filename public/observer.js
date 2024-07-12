@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title');
+    const bottomSection = document.querySelector('.bottom-section');
 
     // Define your opacity multiplier here
-    const opacityMultiplier = .75; // Change this value to adjust the fade rate (1 is a full range from 1 to 0)
+    const opacityMultiplier = 0.75; // Change this value to adjust the fade rate (1 is a full range from 1 to 0)
     const translationMultiplier = 0.5; // Adjust this for background position movement
+    const bottomTranslationMultiplier = 0.5; // Adjust this for background position movement for the bottom section
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -12,18 +14,38 @@ document.addEventListener('DOMContentLoaded', () => {
         // Calculate the scroll position relative to the viewport height
         const clampedScrollPosition = Math.max(0, Math.min(1, scrollTop / windowHeight));
 
-        // Adjust opacity based on scroll position
+        // Adjust opacity based on scroll position for the top section
         const opacity = 1 - (clampedScrollPosition * opacityMultiplier);
         title.style.opacity = opacity;
 
         // Debug log to check opacity value
         console.log('Opacity:', opacity);
 
-        // Adjust background position based on scroll
+        // Adjust background position based on scroll for the top section
         const translateY = scrollTop * translationMultiplier;
         title.style.backgroundPositionY = `-${translateY}px`;
+
+        // Adjust opacity based on scroll position for the bottom section
+        const bottomScrollStart = windowHeight * 1; // Start point for bottom section to begin appearing
+        const bottomScrollPosition = Math.max(0, scrollTop - bottomScrollStart);
+        const bottomScrollProgress = Math.min(1, bottomScrollPosition / windowHeight);
+        const bottomSectionOpacity = bottomScrollProgress;
+        bottomSection.style.opacity = bottomSectionOpacity;
+
+        // Debug log to check bottom section opacity value
+        console.log('Bottom Section Opacity:', bottomSectionOpacity);
+
+        // Adjust background position based on scroll for the bottom section
+        if (bottomScrollPosition >= 0) {
+            const bottomTranslateY = bottomScrollPosition * bottomTranslationMultiplier;
+            bottomSection.style.backgroundPositionY = `-${bottomTranslateY}px`;
+        }
     });
 });
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
