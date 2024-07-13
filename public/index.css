@@ -5,7 +5,6 @@
     font-family: "Figtree", serif;
     text-wrap: wrap;
     text-align: left;
-    scroll-behavior: smooth;
 }
 
 @keyframes fade {
