@@ -8,7 +8,7 @@ function handleSubmit(event) {
     })
     .then(response => response.text())
     .then(data => {
-        location.href = "index.html";
+        location.replace("index.html");
     })
     .catch(error => {
         console.error('Error:', error);
