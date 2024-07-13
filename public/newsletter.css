@@ -12,6 +12,11 @@
     text-align: left;
 }
 
+.link{
+  text-decoration: none; 
+  color:#1e90ff;
+}
+
 .center {
     position: absolute;
     top: 50%;

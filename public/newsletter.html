@@ -6,11 +6,23 @@
     </head>
 
     <body>
-        <form onsubmit="handleSubmit(event)">
-            <p>Enter your email below:</p>
-            <input name="Email" type="email" placeholder="Email" required>
-            <button>Submit</button>
-        </form>
+        <a href="index.html#home" class="link">
+            <button style="position: absolute; right: 1vw; top: 1vh; font-size: 48px; background-color: transparent; color: rgba(0,0,0,.5);">X</button>
+        </a>
+        
+
+        <div class="center">
+            <p style="text-align: center; font-size: 36px;">
+                newsletter in progress... <br>
+                enter email to subscribe
+            </p>
+            <br>
+            <form style="text-align: center;" onsubmit="handleSubmit(event)">
+                <input style="font-size: 18px; padding: 10px 10px 10px 10px; width: 300px; background-color: rgba(0,0,0,.1);" name="Email" type="email" placeholder="Email" required>
+                <button style="font-size: 18px; padding: 10px 10px 10px 10px;">Submit</button>
+            </form>
+            <br>
+        </div>
     </body>
     <script src="email.js"></script>
 </html>

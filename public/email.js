@@ -8,7 +8,7 @@ function handleSubmit(event) {
     })
     .then(response => response.text())
     .then(data => {
-        location.replace("index.html");
+        location.replace("index.html#home");
     })
     .catch(error => {
         console.error('Error:', error);
