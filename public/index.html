@@ -1,90 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- style -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- mail -->
     <a target="_blank" href="mailto:peterjoe2005@gmail.com">
         <button style="background-color: transparent; width: auto; height: 50px; position: fixed; z-index: 4; bottom: 10px; left: 10px">
             <img src="photos/icons8-letter-100.png" style="width: auto; height: 100%; filter: invert(1);">
         </button>
     </a>
+
+    <!-- insta -->
     <a target="_blank" href="https://www.instagram.com/pj.k1m/">
         <button style="background-color: transparent; width: auto; height: 50px; position: fixed; z-index: 4; bottom: 10px; left: 62px">
             <img src="photos/icons8-instagram-100.png" style="width: auto; height: 100%; filter: invert(1);">
         </button>
     </a>
+
+    <!-- linkedin -->
     <a target="_blank" href="https://www.linkedin.com/in/peter-kim-34719126b/">
         <button style="background-color: transparent; width: auto; height: 50px; position: fixed; z-index: 4; bottom: 10px; left: 110px">
             <img src="photos/icons8-linkedin-100.png" style="width: auto; height: 100%; filter: invert(1);">
         </button>
     </a>
+
+    <!-- title -->
     <section>
         <div class="title" style="background: url('photos/pinksky.jpeg') no-repeat center; background-size: 100vw 200vh;  padding-bottom: 50vh; margin-bottom: -50vh; z-index: -1;">
             <div class="title-center">I'm PJ. Welcome to my Portfolio!<br>Feel free to look around</div>
             <figure style="top: 90vh;" id="scroll-down"><img src="photos/downarrow.png" style="width: 40px; height: auto; filter: invert(1)"></figure>
         </div>
     </section>
+
+
     <section id="middle" style="height: 85vh; background-color: transparent">
         <div class="buttons" style="z-index: 0; position: fixed; bottom: 0; width: 100%;">
+            <!-- triangles -->
             <div class="triangle-left" style="z-index: 1; top: 50vh;"></div>
             <div class="triangle-right" style="z-index: 1; top: 50vh;"></div>
             <div class="triangle-left" style="z-index: 2; top: 55vh; border-right: 100vw solid rgb(252,221,201);"></div>
             <div class="triangle-right" style="z-index: 2; top: 55vh; border-left: 100vw solid rgb(252,221,201);"></div>
+
+            <!-- buttons -->
             <div style="height: 100vh; width: 100%; background-color: rgb(252,221,201); position: absolute; top: 49vh; padding-top: 14vh; margin-top: -5vh; z-index: 3;">
                 
+                <!-- aboutme -->
                 <a href="aboutme.html">
-                    <button class="container" style="position: absolute; left: 1vw; width: 30vw; height: 90vh; top: 10vh; background: url('photos/palmtrees.jpeg') no-repeat center; background-size: cover;">
+                    <!-- desktop -->
+                    <button class="container" style="position: absolute; left: 1vw; width: 30vw; bottom: 12.5vh; top: 10vh; background: url('photos/palmtrees.jpeg') no-repeat center; background-size: cover;">
                         <div class="overlay">
                             <div class="text" style="color: black;">About Me</div>
                         </div>
                     </button>
-                    <button class="mobile" style="position: absolute; left: 1vw; width: 30vw; height: 90vh; top: 10vh; background: url('photos/palmtrees.jpeg') no-repeat center; background-size: cover;">
-                        <div div class="text" style="color: white; background-color: rgba(233, 116, 81, 1); padding: 10% 10% 10% 10%;">About Me</div>
+
+                    <!-- mobile -->
+                    <button class="mobile" style="position: absolute; left: 1vw; width: 30vw; bottom: 12.5vh; top: 10vh; background: url('photos/palmtrees.jpeg') no-repeat center; background-size: cover;">
+                        <div div class="text" style="color: white; background-color: rgb(250,188,162); padding: 10% 10% 10% 10%;">About Me</div>
                     </button>
                 </a>
                 
-                <button class="container" style="position: absolute; left: 34.33vw; width: 30vw; height: 42.5vh; top: 10vh; background: url('photos/projects.png') no-repeat center; background-size: cover;">
-                    <div class="overlay">
-                        <div class="text" style="color: black;">Projects</div>
-                    </div>
-                </button>
-                <button class="mobile" style="position: absolute; left: 34.33vw; width: 30vw; height: 42.5vh; top: 10vh; background: url('photos/projects.png') no-repeat center; background-size: cover;">
-                    <div div class="text" style="color: white; background-color: rgba(233, 116, 81, 1); padding: 10% 10% 10% 10%;">Projects</div>
-                </button>
+                <!-- homepage -->
+                <div style="position: absolute; left: 34.33vw; width: 30vw; bottom: 70vh; top: 10vh; background-color: rgb(251, 206, 177);">
+                    <div class="text" style="color: black;">Homepage</div>
+                </div>
 
-                <button class="container" style="position: absolute; left: 68vw; width: 30vw; height: 42.5vh; top: 10vh; background: url('photos/beach.png') no-repeat center; background-size: cover;">
-                    <div class="overlay">
-                        <div class="text" style="color: black;">Newsletter</div>
-                    </div>
-                </button>
-                <button class="mobile" style="position: absolute; left: 68vw; width: 30vw; height: 42.5vh; top: 10vh; background: url('photos/beach.png') no-repeat center; background-size: cover;">
-                    <div div class="text" style="color: white; background-color: rgba(233, 116, 81, 1); padding: 10% 10% 10% 10%;">Newsletter</div>
-                </button>
+                <!-- projects -->
+                <a>
+                    <!-- desktop -->
+                    <button class="container" style="position: absolute; left: 34.33vw; width: 30vw; bottom: 12.5vh; top: 50vh; background: url('photos/projects.png') no-repeat center; background-size: cover;">
+                        <div class="overlay">
+                            <div class="text" style="color: black;">Projects</div>
+                        </div>
+                    </button>
 
+                    <!-- mobile -->
+                    <button class="mobile" style="position: absolute; left: 34.33vw; width: 30vw; bottom: 12.5vh; top: 50vh; background: url('photos/projects.png') no-repeat center; background-size: cover;">
+                        <div div class="text" style="color: white; background-color: rgb(250,188,162); padding: 10% 10% 10% 10%;">Projects</div>
+                    </button>
+                </a>
+                
+                <!-- newsletter -->
+                <a>
+                    <!-- desktop -->
+                    <button class="container" style="position: absolute; left: 68vw; width: 30vw; bottom: 55vh; top: 10vh; background: url('photos/legos.png') no-repeat center; background-size: cover;">
+                        <div class="overlay">
+                            <div class="text" style="color: black;">Newsletter</div>
+                        </div>
+                    </button>
+
+                    <!-- mobile -->
+                    <button class="mobile" style="position: absolute; left: 68vw; width: 30vw; bottom: 55vh; top: 10vh; background: url('photos/legos.png') no-repeat center; background-size: cover;">
+                        <div div class="text" style="color: white; background-color: rgb(250,188,162); padding: 10% 10% 10% 10%;">Newsletter</div>
+                    </button>
+                </a>
+                
+                <!-- resume -->
                 <a href="resume.pdf" target="_blank">
-                    <button class="container" style="position: absolute; left: 34.33vw; width: 30vw; height: 42.5vh; top: 57.5vh; background: url('photos/drake.png') no-repeat center; background-size: cover;">
+                    <!-- desktop -->
+                    <button class="container" style="position: absolute; left: 68vw; width: 30vw; bottom: 12.5vh; top: 65vh; background: url('photos/drake.png') no-repeat center; background-size: cover;">
                         <div class="overlay">
                             <div class="text" style="color: black;">Resume</div>
                         </div>
                     </button>
-                    <button class="mobile" style="position: absolute; left: 34.33vw; width: 30vw; height: 42.5vh; top: 57.5vh; background: url('photos/drake.png') no-repeat center; background-size: cover;">
-                        <div div class="text" style="color: white; background-color: rgba(233, 116, 81, 1); padding: 10% 10% 10% 10%;">Resume</div>
+
+                    <!-- mobile -->
+                    <button class="mobile" style="position: absolute; left: 68vw; width: 30vw; bottom: 12.5vh; top: 65vh; background: url('photos/drake.png') no-repeat center; background-size: cover;">
+                        <div div class="text" style="color: white; background-color: rgb(250,188,162); padding: 10% 10% 10% 10%;">Resume</div>
                     </button>
                 </a>
-                <button class="container" style="position: absolute; left: 68vw; width: 30vw; height: 42.5vh; top: 57.5vh; background: url('photos/legos.png') no-repeat center; background-size: cover;">
-                    <div class="overlay">
-                        <div class="text" style="color: black;">Films</div>
-                    </div>
-                </button>
-                <button class="mobile" style="position: absolute; left: 68vw; width: 30vw; height: 42.5vh; top: 57.5vh; background: url('photos/legos.png') no-repeat center; background-size: cover;">
-                    <div div class="text" style="color: white; background-color: rgba(233, 116, 81, 1); padding: 10% 10% 10% 10%;">Films</div>
-                </button>
+
+                
             </div>
         </div>
     </section>
     
+    <!-- js -->
     <script src="observer.js"></script>
     <script src="desktopcheck.js"></script>
 </body>
