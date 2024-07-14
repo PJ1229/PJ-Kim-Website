@@ -15,7 +15,7 @@
     text-align: center;
     font-size: 48px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 }
 
 .header {
@@ -33,22 +33,30 @@
 .project {
     display: flex;
     align-items: center;
-    padding-top: 20px;
+    margin-top: 20px;
     padding-bottom: 20px;
     width: 80vw;
+
 }
 
 .project:nth-child(odd) {
     flex-direction: row; /* Default: image on left, text on right */
 }
-
-.project:nth-child(even) {
-    flex-direction: row-reverse; /* Image on right, text on left */
-}
-
 .project img {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
+    width: 400px; 
+    max-height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.project video {
+    width: 400px; 
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.project iframe {
+    width: 400px; 
+    height: 300px;
     margin-left: 20px;
     margin-right: 20px;
 }
