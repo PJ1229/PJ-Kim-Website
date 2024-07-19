@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const invertAmount = (scrollTop / maxScroll) * 100;
+    
+    document.querySelectorAll('.icon, .top-bar').forEach(div => {
+        div.style.filter = `invert(${invertAmount}%)`;
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelector('.buttons');
     const translationMultiplier = -1.75;
