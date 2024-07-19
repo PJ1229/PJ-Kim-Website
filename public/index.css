@@ -32,16 +32,6 @@
     position: relative;
 }
 
-.title-center {
-    text-align: left;
-    padding-left: 20vw;
-    width: 25vw;
-    font-size: 48px;
-    color: white;
-    animation: fade 2.5s 1;
-    margin-top: 40vh;
-}
-
 .icon{
     background-color: transparent; 
     width: auto; 
