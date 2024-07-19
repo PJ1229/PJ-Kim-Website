@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title');
-    const opacityMultiplier = 0.75;
-    const translationMultiplier = -0.5;
+    const opacityMultiplier = 0.5;
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -9,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const clampedScrollPosition = Math.max(0, Math.min(1, scrollTop / windowHeight));
         const opacity = 1 - (clampedScrollPosition * opacityMultiplier);
         title.style.opacity = opacity;
-        const translateY = scrollTop * translationMultiplier;
-        title.style.backgroundPositionY = `-${translateY}px`;
     });
 });
 

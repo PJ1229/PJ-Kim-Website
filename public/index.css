@@ -5,6 +5,7 @@
     font-family: "Figtree", serif;
     text-wrap: wrap;
     text-align: left;
+    scroll-behavior: smooth;
 }
 
 @keyframes fade {
@@ -18,6 +19,11 @@
     100% { opacity: 0; }
 }
 
+.text{
+    font-size: 48px;
+    color: white;
+}
+
 .title {
     height: 100vh;
     display: flex;
@@ -27,7 +33,9 @@
 }
 
 .title-center {
-    text-align: center;
+    text-align: left;
+    padding-left: 20vw;
+    width: 25vw;
     font-size: 48px;
     color: white;
     animation: fade 2.5s 1;
@@ -122,16 +130,17 @@
     height: 0;
     position: absolute;
     bottom: 0;
+    top: 55vh;
 }
 
 .triangle-left {
     right: 0;
     border-top: 100vh solid transparent;
-    border-right: 100vw solid rgba(251, 206, 177, .5);
+    border-right: 130vw solid black;
 }
 
 .triangle-right {
     left: 0;
     border-top: 100vh solid transparent;
-    border-left: 100vw solid rgba(251, 206, 177, .5);
+    border-left: 130vw solid black;
 }
