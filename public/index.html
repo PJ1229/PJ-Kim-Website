@@ -7,8 +7,9 @@
 </head>
 <body>
     <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;">
+        <div class="top-bar" style="height: 36px; width: 100%; background-color: black; top:0;"></div>
         <hr class="top-bar" style="display: block; height: 2px; width: 100%; position: fixed; top:36px; background: white; z-index: -1px;">
-        <a href="aboutme.html">
+        <a href="#aboutme">
             <button class="top-bar">about me</button>
         </a>
         <a href="#projects">
@@ -61,8 +62,7 @@
         <figure style="bottom: 15px;" id="scroll-down"><img src="photos/downarrow.png" style="width: 40px; height: auto; filter: invert(1);"></figure>
     </section>
 
-
-    <section style="height: 50vh; background-color: transparent;">
+    <section id="aboutme" style="height: 50vh; margin-top: -40vh; padding-top: 40vh; background-color: transparent;">
         <div class="buttons" style="z-index: 0; position: fixed; bottom: 0; width: 100%;">
             <div class="triangle-left" style="z-index: 2;"></div>
             <div class="triangle-right" style="z-index: 2;"></div>
@@ -76,14 +76,19 @@
         </div>
     </section>
 
-    <section style="height: 100vh; background-color: white" id="projects">
+    <section style="height: 170vw; background-color: white; padding-top: 20vh; margin-top: -20vh;" id="projects">
+        <h1 style="padding-top: 4vw; font-size: 48px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -20vh;">my favorite pieces</h1>
         <div class="grid-container">
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh; background: url(photos/projects.png) no-repeat center; background-size: cover;"></div></a>
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh;"></div>
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh;"></div>
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh;"></div>
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh;"></div>
-            <a><div id="grid-card" class="container" style="width: 40vw; height: 20vh;"></div>
+            <a><div class="grid-card" style="width: 50vw;"></div>
+            <a><div class="grid-card" style="width: 30vw; background: url(photos/projects.png) no-repeat center; background-size: cover;"></div></a>
+            <a><div class="grid-card" style="width: 50vw;"></div>
+            <a><div class="grid-card" style="width: 30vw; background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div></a>
+            <a><div class="grid-card" style="width: 50vw;"></div>
+            <a><div class="grid-card" style="width: 30vw;"></div></a>
+            <a><div class="grid-card" style="width: 50vw;"></div>
+            <a><div class="grid-card" style="width: 30vw;"></div></a>
+            <a><div class="grid-card" style="width: 50vw;"></div>
+            <a><div class="grid-card" style="width: 30vw;"></div></a>
         </div>
     </section>
     

@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('scroll', () => {
+    const invertMultiplier = 4.5
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const invertAmount = (scrollTop / maxScroll) * 100;
+    const invertAmount = (scrollTop / maxScroll) * 100 * invertMultiplier;
     
     document.querySelectorAll('.icon, .top-bar').forEach(div => {
         div.style.filter = `invert(${invertAmount}%)`;
@@ -58,3 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(tag);
     });
 });
+
