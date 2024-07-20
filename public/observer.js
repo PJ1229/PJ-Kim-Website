@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('scroll', () => {
-    const invertMultiplier = 4.5
+    const invertMultiplier = 2
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const invertAmount = (scrollTop / maxScroll) * 100 * invertMultiplier;
