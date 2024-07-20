@@ -39,15 +39,48 @@
 
 .grid-container{
     display: grid; 
+    margin-left: 5vw;
+    margin-right: 5vw;
     row-gap: 1vw; 
+    column-gap: 5vw;
     grid-template-columns: auto auto; 
 }
 
-.grid-card{
+.grid-img{
     display: inline-grid; 
     background-color: transparent; 
     outline: 2px solid black;
+    width: 42.5vw; 
     height: 30vw;
+}
+
+.grid-github{
+    display: inline-grid; 
+    background-color: transparent; 
+    height: 48px; 
+    margin-top: -31vw;
+    text-align: left;
+    width: 42.5vw; 
+}
+
+.grid-header{
+    display: inline-grid; 
+    background-color: transparent; 
+    font-style:italic; 
+    font-size: 24px; 
+    font-weight: bold; 
+    padding-bottom: 10px; 
+    margin-top: -15px;
+    width: 42.5vw; 
+}
+
+.grid-text{
+    display: inline-grid; 
+    background-color: transparent; 
+    font-size: 20px; 
+    text-align: left; 
+    margin-top: -15px;
+    width: 42.5vw; 
 }
 
 .icon{

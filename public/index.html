@@ -50,7 +50,7 @@
     <section>
         <div class="title" style="background-color: black; background-size: 100vw 200vh;  padding-bottom: 25vh; margin-bottom: -25vh; z-index: -1;">
             <div style="background-color: transparent; font-size: 48px; margin-left: 20vw; margin-top: 55vh; text-wrap: nowrap; position: fixed;">
-                <img src="photos/nobkgtitle.png" style="width: auto; height: 1000px;">
+                <img class="bkgtitle" src="photos/nobkgtitle.png" style="width: auto; height: 1000px;">
             </div>
             <div style="background-color: transparent; color: white; font-size: 48px; margin-left: -40vw; margin-top: -20vh; text-wrap: nowrap; animation: fade 2.5s 1; position: absolute; z-index: 0;">
                 hi!
@@ -76,19 +76,30 @@
         </div>
     </section>
 
-    <section style="height: 170vw; background-color: white; padding-top: 20vh; margin-top: -20vh;" id="projects">
+    <section style="min-height: 100vh; height: 100vw; background-color: white; padding-top: 20vh; margin-top: -20vh;" id="projects">
         <h1 style="padding-top: 4vw; font-size: 48px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -20vh;">my favorite pieces</h1>
         <div class="grid-container">
-            <a><div class="grid-card" style="width: 50vw;"></div>
-            <a><div class="grid-card" style="width: 30vw; background: url(photos/projects.png) no-repeat center; background-size: cover;"></div></a>
-            <a><div class="grid-card" style="width: 50vw;"></div>
-            <a><div class="grid-card" style="width: 30vw; background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div></a>
-            <a><div class="grid-card" style="width: 50vw;"></div>
-            <a><div class="grid-card" style="width: 30vw;"></div></a>
-            <a><div class="grid-card" style="width: 50vw;"></div>
-            <a><div class="grid-card" style="width: 30vw;"></div></a>
-            <a><div class="grid-card" style="width: 50vw;"></div>
-            <a><div class="grid-card" style="width: 30vw;"></div></a>
+            <!-- row 1 -->
+            <a target="_blank" href="https://www.youtube.com/watch?v=iKKHzpIKJgA&t=37s"><div class="grid-img" style="background: url(photos/projects.png) no-repeat center; background-size: 28vw 28vw;"></div></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><div class="grid-img" style="background: url(photos/pathfinding.png) no-repeat center; background-size: 28vw 28vw;"></div></a>
+            <div class="grid-github"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML" style="margin-left: 0;"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+            <div class="grid-github"></div>
+            <span class="grid-header">
+                3d space renderer -
+            </span>
+            <span class="grid-header">
+                pathfinding simulation -
+            </span>
+            <div class="grid-text">
+                an interactive software that allows users to enter 3d math functions, apply linear transformations, 
+                and move around in three dimensional space.
+            </div>
+            <div class="grid-text">
+                player moves around as a pixelated tank trying to shoot moving enemies around obstacles. incorporates
+                a raymarching pathfinding algorithm.
+            </div>
+            
+
         </div>
     </section>
     

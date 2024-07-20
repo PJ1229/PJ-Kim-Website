@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title');
-    const opacityMultiplier = 0.5;
+    const opacityMultiplier = 1;
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -59,4 +59,3 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(tag);
     });
 });
-
