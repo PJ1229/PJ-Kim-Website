@@ -83,6 +83,16 @@
     width: 42.5vw; 
 }
 
+.grid-date{
+    display: inline-grid; 
+    background-color: transparent; 
+    font-size: 20px;
+    width: 42.5vw; 
+    text-align: right; 
+    margin-top: -3px;
+    margin-bottom: 20px;
+}
+
 .icon{
     background-color: transparent; 
     width: auto; 
