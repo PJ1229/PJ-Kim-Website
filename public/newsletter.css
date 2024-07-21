@@ -40,3 +40,21 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(255,255,255,.4); 
 }
+
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px; 
+  background-color: black; 
+  color: white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
