@@ -62,6 +62,8 @@
     text-align: left;
     width: auto; 
     margin-top: -30vw;
+    background-color: white;
+    outline: 2px solid black;
 }
 
 .grid-header{
