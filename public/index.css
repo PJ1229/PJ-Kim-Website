@@ -57,11 +57,11 @@
     height: 30vw;
 }
 
-.grid-github{
+.grid-link{
     height: 48px; 
-    margin-top: -29.75vw;
     text-align: left;
-    width: 42.5vw; 
+    width: auto; 
+    margin-top: -30vw;
 }
 
 .grid-header{
