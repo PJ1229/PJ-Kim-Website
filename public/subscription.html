@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree">
+        <link rel="stylesheet" href="newsletter.css">
+    </head>
+
+    <body>
+        <a href="newsletter.html" class="link">
+            <button style="position: absolute; right: 1vw; top: 1vh; font-size: 48px; background-color: transparent; color: rgba(0,0,0,.5);">X</button>
+        </a>
+
+        <div id="loading-screen" style="display: none;">
+            please wait loading ...
+        </div>
+
+        <div class="center" id="content">
+            <p style="text-align: center; font-size: 36px;">
+                newsletter in progress... <br>
+                enter email to subscribe
+            </p>
+            <br>
+            <form style="text-align: center;" onsubmit="handleSubmit(event)">
+                <input style="font-size: 18px; padding: 10px 10px 10px 10px; width: 300px; background-color: rgba(0,0,0,.1);" name="Email" type="email" placeholder="Email" required>
+                <button style="font-size: 18px; padding: 10px 10px 10px 10px; color: black;">Submit</button>
+            </form>
+            <br>
+        </div>
+
+        <script src="email.js"></script>
+    </body>
+</html>

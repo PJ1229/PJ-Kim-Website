@@ -15,7 +15,7 @@ function handleSubmit(event) {
     })
     .then(response => response.text())
     .then(data => {
-        location.replace("index.html#home");
+        location.replace("newsletter.html");
     })
     .catch(error => {
         console.error('Error:', error);
