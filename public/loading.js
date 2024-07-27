@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             loadingScreen.style.display = "none";
             content.style.display = "block";
-        }, 1000); // Adjust this value to set a minimum delay, e.g., 1000ms (1 second)
+        }, 0); // Adjust this value to set a minimum delay, e.g., 1000ms (1 second)
     });
 });

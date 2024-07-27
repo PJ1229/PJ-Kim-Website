@@ -6,19 +6,25 @@
     </head>
 
     <body>
-        <div class="title">PJ's Newsletter</div>
-        <a href="index.html" class="link">
-            <button class="home"></button>
-        </a>
-        <a href="subscription.html" class="link">
-            <button class="subscribe">Subscribe</button>
-        </a>
-        <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 24px; margin-bottom: 0px;">
-        <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
-            <button class="button"><a href="newsletter.html" class="link">Home</a></button>
-            <button class="button"><a href="archive.html" class="link">Archive</a></button>
-            <button class="selected-button">About</button>
-        </section>
-        <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 0px; margin-bottom: 8px;">
+        <div id="loading-screen">
+            please wait loading ...
+        </div>
+        <div id="content">
+            <div class="title">PJ's Newsletter</div>
+            <a href="index.html" class="link">
+                <button class="home"></button>
+            </a>
+            <a href="subscription.html" class="link">
+                <button class="subscribe">Subscribe</button>
+            </a>
+            <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 24px; margin-bottom: 0px;">
+            <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
+                <button class="button"><a href="newsletter.html" class="link">Home</a></button>
+                <button class="button"><a href="archive.html" class="link">Archive</a></button>
+                <button class="selected-button">About</button>
+            </section>
+            <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 0px; margin-bottom: 8px;">
+        </div>
+        <script src="loading.js"></script>
     </body>
 </html>
