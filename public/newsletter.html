@@ -9,25 +9,28 @@
         <div id="loading-screen">
             please wait loading ...
         </div>
-        <div id="content" class="desktop">
+        <div id="content" class="desktop" style="position: absolute; top:0;">
             <div class="title">PJ's Newsletter</div>
-            <a href="index.html" class="link">
+            <a href="index.html" class="button-link">
                 <button class="home"></button>
             </a>
-            <a href="subscription.html" class="link">
+            <a href="subscription.html" class="button-link">
                 <button class="subscribe">Subscribe</button>
             </a>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 24px; margin-bottom: 0px;">
             <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
                 <button class="selected-button">Home</button>
-                <button class="button"><a href="archive.html" class="link">Archive</a></button>
-                <button class="button"><a href="about.html" class="link">About</a></button>
+                <button class="button"><a href="archive.html" class="button-link">Archive</a></button>
+                <button class="button"><a href="about.html" class="button-link">About</a></button>
             </section>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 0px; margin-bottom: 8px;">
         </div>
+
         <div id="content" class="mobile">
-            test
+            <div class="home-mobile"></div>
+            <div class="title-mobile">PJ's Newsletter</div>
         </div>
+
         <script src="loading.js"></script>
         <script src="mobile.js"></script>
     </body>

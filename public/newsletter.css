@@ -18,12 +18,8 @@
 }
 
 .center {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 100%;
-    text-align: center;
-  }
+  position: absolute;top: 50%;transform: translate(0, -50%);width: 100%;text-align: center;
+}
 
 ::-webkit-scrollbar {
 	width: 12px;
@@ -54,82 +50,46 @@
   color: black;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 .selected-button{
-  text-align: center; 
-  font-size: 16px; 
-  height: 48px; 
-  background-color: rgba(0,0,0,.25); 
-  color: white;
+  text-align: center; font-size: 16px; height: 48px; background-color: rgba(0,0,0,.25); color: white;
 }
 
 .button{
-  text-align: center; 
-  height: 48px; 
-  background-color: rgba(0,0,0,0);
+  text-align: center; height: 48px; background-color: rgba(0,0,0,0);
 }
 
-.link{
-  text-decoration: none; 
-  color: black; 
-  font-size: 16px; 
-  padding-top: 16px; 
-  padding-bottom: 16px;
+.button-link{
+  text-decoration: none; color: black; font-size: 16px; padding-top: 16px; padding-bottom: 16px;
 }
 
 .subscribe{
-  position: absolute; 
-  right: 38px; 
-  top: 21px; 
-  height: 40px; 
-  width: auto; 
-  background-color: transparent; 
-  color: black; 
-  font-size: 20px; 
-  border-radius: 4px; 
-  padding-left: 20px; 
-  padding-right: 20px; 
-  outline:2px solid rgba(191,191,191,255);
+  position: absolute; right: 38px; top: 21px; height: 40px; width: auto; background-color: transparent; color: black; font-size: 20px; border-radius: 4px; padding-left: 20px; padding-right: 20px; outline:2px solid rgba(191,191,191,255);
 }
 
 .subscribe:hover{
-  background-color: rgba(191,191,191,255); 
-  color: white;
+  background-color: rgba(191,191,191,255); color: white;
 }
 
 .title{
   width: 100%; text-align: center; font-size: 30px; background-color: transparent; color: rgba(0,0,0,1); margin-top: 22px;
 }
 
+.title-mobile{
+  font-size: 48px; top: 48px; left: 144px; position: absolute;
+}
+
 .home{
-  position: absolute; 
-  left: 20px; 
-  top: 19px; 
-  background-color: transparent;
-  color: white; 
-  border-radius: 4px; 
-  background: url('photos/title.png') center no-repeat; 
-  background-size: 175%; 
-  height: 44px; 
-  width: 44px;
+  position: absolute; left: 20px; top: 19px; background-color: transparent;color: white; border-radius: 4px;  background: url('photos/title.png') center no-repeat; background-size: 175%; height: 44px; width: 44px;
+}
+
+.home-mobile{
+  border-radius: 4px; background: url('photos/title.png') center no-repeat; background-size: 175%;  width: 84px; height: 84px; top:32px; left: 32px; position: absolute;
 }
 
 #loading-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 48px; 
-  background-color: white; 
-  color: black;
-  z-index: 999;
-  position: absolute; 
-  top:0;
+  width: 100%;height: 100%;background: #fff;display: flex;justify-content: center; align-items: center; font-size: 48px;  background-color: white;  color: black;z-index: 999;position: absolute; top:0;
+}
+
+#content{
+  position: absolute; top:0;width: 100%;
 }
