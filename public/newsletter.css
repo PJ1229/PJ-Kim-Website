@@ -13,12 +13,11 @@
 }
 
 .link{
-  text-decoration: none; 
-  color:#1e90ff;
+  text-decoration: none; color:#1e90ff;
 }
 
 .center {
-  position: absolute;top: 50%;transform: translate(0, -50%);width: 100%;text-align: center;
+  position: absolute; top: 50%;transform: translate(0, -50%);width: 100%;text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -38,16 +37,7 @@
 }
 
 #loading-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 48px; 
-  background-color: white; 
-  color: black;
+  position: fixed;width: 100%; height: 100%; background: #fff; display: flex;justify-content: center;align-items: center;font-size: 48px;  background-color: white; color: black;
 }
 
 .selected-button{
@@ -58,7 +48,7 @@
   text-align: center; height: 48px; background-color: rgba(0,0,0,0);
 }
 
-.button-link{
+.link{
   text-decoration: none; color: black; font-size: 16px; padding-top: 16px; padding-bottom: 16px;
 }
 
@@ -88,8 +78,4 @@
 
 #loading-screen {
   width: 100%;height: 100%;background: #fff;display: flex;justify-content: center; align-items: center; font-size: 48px;  background-color: white;  color: black;z-index: 999;position: absolute; top:0;
-}
-
-#content{
-  position: absolute; top:0;width: 100%;
 }
