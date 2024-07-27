@@ -15,13 +15,12 @@ function handleSubmit(event) {
     })
     .then(response => response.text())
     .then(data => {
-        location.replace("index.html");
+        location.replace("index.html"); //change to newsletter.html once finished
     })
     .catch(error => {
         console.error('Error:', error);
         alert('Submission failed. Please try again.');
         
-        // Hide the loading screen and show the content again in case of error
         loadingScreen.style.display = "none";
         content.style.display = "block";
     });
