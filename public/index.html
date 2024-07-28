@@ -9,8 +9,10 @@
     <div id="loading-screen">
         please wait loading ...
     </div>
-    <div id="content" style="display: none;">
-        <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;">
+    <div id="content" style="display: none; position: absolute; top:0; width: 100%;">
+        
+        <!-- top menu bar: desktop -->
+        <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;" class="desktop">
             <div class="top-bar" style="height: 36px; width: 100%; background-color: black; top:0;"></div>
             <hr class="top-bar" style="display: block; height: 2px; width: 100%; position: fixed; top:36px; background: white; z-index: -1px;">
             <a href="#aboutme">
@@ -23,8 +25,24 @@
                 <button class="top-bar">newsletter</button>
             </a>
         </section>
+
+        <!-- top menu bar: mobile -->
+        <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;" class="mobile">
+            <div class="top-bar" style="height: 88px; width: 100%; background-color: black; top:0;"></div>
+            <hr class="top-bar" style="display: block; height: 3px; width: 100%; position: fixed; top:88px; background: white; z-index: -1px;">
+            <a href="#aboutme">
+                <button class="top-bar" style="font-size: 48px; margin-top: 10px;">about me</button>
+            </a>
+            <a href="#projects">
+                <button class="top-bar" style="font-size: 48px; margin-top: 10px;">projects</button>
+            </a>
+            <a href="subscription.html">
+                <button class="top-bar" style="font-size: 48px; margin-top: 10px;">newsletter</button>
+            </a>
+        </section>
         
-        <section>
+        <!-- contacts: desktop -->
+        <section class="desktop">
             <!-- mail -->
             <a target="_blank" href="mailto:peterjoe2005@gmail.com">
                 <button class="icon" style="height: 27px; bottom: 150px; left: 11px">
@@ -46,22 +64,62 @@
                 </button>
             </a>
         </section>
+
+        <!-- contacts: mobile -->
+        <section class="mobile">
+            <!-- mail -->
+            <a target="_blank" href="mailto:peterjoe2005@gmail.com">
+                <button class="icon" style="height: 60.75px; bottom: 255px; left: 15.5px">
+                    <img src="photos/icons8-mail-100.png" style="width: auto; height: 100%; filter: invert(1);">
+                </button>
+            </a>
+    
+            <!-- insta -->
+            <a target="_blank" href="https://www.instagram.com/pj.k1m/">
+                <button class="icon" style="height: 78.75px; bottom: 135px; left: 7px">
+                    <img src="photos/icons8-instagram-120.png" style="width: auto; height: 100%; filter: invert(1);">
+                </button>
+            </a>
+    
+            <!-- linkedin -->
+            <a target="_blank" href="https://www.linkedin.com/in/peter-kim-34719126b/">
+                <button class="icon" style="height: 78.75px; bottom: 15px; left: 7px">
+                    <img src="photos/icons8-linkedin-120.png" style="width: auto; height: 100%; filter: invert(1);">
+                </button>
+            </a>
+        </section>
         
     
         <!-- title -->
         <section>
             <div class="title" style="background-color: black; background-size: 100vw 200vh;  padding-bottom: 25vh; margin-bottom: -25vh; z-index: -1;">
-                <div style="background-color: transparent; font-size: 48px; margin-left: 20vw; margin-top: 55vh; text-wrap: nowrap; position: fixed;">
+                
+                <!-- image: desktop -->
+                <div class="desktop" style="background-color: transparent; font-size: 48px; margin-left: 20vw; margin-top: 55vh; text-wrap: nowrap; position: fixed;">
                     <img class="bkgtitle" src="photos/nobkgtitle.png" style="width: auto; height: 1000px; animation: fade 4s 0s 1 both;">
                 </div>
-                <div style="background-color: transparent; color: white; font-size: 48px; margin-left: -40vw; margin-top: -20vh; text-wrap: nowrap; animation: fade 2.5s 1; position: absolute; z-index: 0;">
+
+                <!-- image: mobile -->
+                <div class="mobile" style="background-color: transparent; font-size: 48px; margin-left: 20vw; margin-top: 55vh; text-wrap: nowrap; position: fixed;">
+                    <img class="bkgtitle" src="photos/nobkgtitle.png" style="width: auto; height: 1500px; animation: fade 4s 0s 1 both;">
+                </div>
+
+                <!-- intro: desktop -->
+                <div class="desktop" style="background-color: transparent; color: white; font-size: 48px; margin-left: -40vw; margin-top: -20vh; text-wrap: nowrap; animation: fade 2.5s 1; position: absolute; z-index: 0;">
+                    hi!
+                    im PJ<br>
+                    i love to make things,<br>
+                    take a look around!
+                </div>
+
+                <!-- intro: mobile -->
+                <div class="mobile" style="background-color: transparent; color: white; font-size: 80px; margin-left: -15vw; margin-top: -45vh; text-wrap: nowrap; animation: fade 2.5s 1; position: absolute; z-index: 0;">
                     hi!
                     im PJ<br>
                     i love to make things,<br>
                     take a look around!
                 </div>
             </div>
-            <figure style="bottom: 15px;" id="scroll-down"><img src="photos/downarrow.png" style="width: 40px; height: auto; filter: invert(1);"></figure>
         </section>
     
         <section id="aboutme" style="height: 50vh; margin-top: -40vh; padding-top: 40vh; background-color: transparent;">
@@ -73,6 +131,7 @@
                 <!-- buttons -->
                 <div style="height: 101vh; width: 100%; background-color: black; position: absolute; top: 49vh; padding-top: 14vh; margin-top: -5vh; z-index: 3;">
                     <h1 style="color: white; margin-top: 0; margin-left: 10vw; font-size: 48px;">heres some stuff about me:</h1>
+
                     <p style="color: white; font-size: 1.8vh; margin-left: 10vw; margin-top: 24px; width: 55vw; height: 80vh; min-width: 300px;">
                         im 18 years old.<br>
                         <br>
@@ -100,25 +159,37 @@
                     <p style="font-size: 2vh; color: white; width: 20vw; position: absolute; right:10vw; top: 65vh;">
                         view my <a target="_blank" href="resume.pdf" style="text-decoration: none; color:#1e90ff;">resume</a><br>
                     </p>
-                    <a href="#projects">
+
+                    <!-- button: desktop -->
+                    <a href="#projects" class="desktop">
                         <div style="position: absolute; bottom: 15vh; height: 36px; background-color: white; width: 25vw; margin-left: 10vw; text-align: center; color: black; padding-top: 6px; font-size: 24px;">
                             projects
                         </div>
                     </a>
-                    <a href="subscription.html">
+                    <a href="subscription.html" class="desktop">
                         <div style="position: absolute; bottom: 15vh; height: 36px; background-color: white; width: 26.66vw; margin-left: 36.66vw; text-align: center; color: black; padding-top: 6px; font-size: 24px;">
+                            newsletter
+                        </div>
+                    </a>
+
+                    <!-- button: desktop -->
+                    <a href="#projects" class="mobile">
+                        <div style="position: absolute; bottom: 15vh; height: 72px; background-color: white; width: 35vw; margin-left: 12.5vw; text-align: center; color: black; padding-top: 6px; font-size: 48px;">
+                            projects
+                        </div>
+                    </a>
+                    <a href="subscription.html" class="mobile">
+                        <div style="position: absolute; bottom: 15vh; height: 72px; background-color: white; width: 35vw; margin-left: 52.5vw; text-align: center; color: black; padding-top: 6px; font-size: 48px;">
                             newsletter
                         </div>
                     </a>
                 </div>
             </div>
         </section>
-    
-        <section style="min-height: 100vh; height: 125vw; background-color: white; padding-top: 20vh; margin-top: -20vh;" id="projects">
+
+        <section style="min-height: 100vh; height: 125vw; background-color: white; padding-top: 20vh; margin-top: -20vh; z-index: -3;" id="projects">
             <h1 style="padding-top: 4vw; font-size: 48px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -20vh;">my favorite pieces</h1>
             <div class="grid-container">
-
-                <!-- 3d rendering software -->
                 <div class="grid-item">
                     <div class="grid-img" style="background: url(photos/projects.png) no-repeat center; background-size: 28vw 28vw;"></div>
                     <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
@@ -135,7 +206,6 @@
                     </div>
                 </div>
 
-                <!-- a film about biking -->
                 <div class="grid-item">
                    <div class="grid-img" style="background: url(photos/bike-thumbnail.png) no-repeat center; background-size: 28vw 28vw;"></div>
                     <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.instagram.com/p/C9zrgpbOxxt/"><img src="photos/icons8-instagram-120.png" style="height: 48px;"></a></div>
@@ -151,7 +221,6 @@
                     </div>
                 </div>
 
-                <!-- pathfinding simulation -->
                 <div class="grid-item">
                     <div class="grid-img" style="background: url(photos/missilepathfinding.png) no-repeat center; background-size: 28vw 28vw;"></div>
                     <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
@@ -167,7 +236,6 @@
                     </div>
                 </div>
                
-                <!-- pj kim website -->
                 <div class="grid-item">
                     <div class="grid-img" style="background: url(photos/beach.png) no-repeat center; background-size: 28vw 28vw;"></div>
                     <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PJ-Kim-Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
@@ -184,7 +252,6 @@
                     </div>
                 </div>
 
-                <!-- problem bank submission -->
                 <div class="grid-item">
                     <div class="grid-img" style="background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div>
                     <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PDL_Problem_Bank_Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
@@ -202,13 +269,93 @@
                 </div>
             </div>
         </section>
-        
-        <!-- js -->
-        <script src="observer.js"></script>
-        <script src="desktopcheck.js"></script>
     </div>
-    
+
+    <!-- js -->
+    <script src="observer.js"></script>
     <script src="loading.js"></script>
     <script src="mobile.js"></script>
 </body>
 </html>
+
+<!--
+    <div class="grid-container">
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/projects.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=iKKHzpIKJgA&t=37s"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            3d space renderer
+                        </span>
+                        <div class="grid-text">
+                            interactive software that allows users to enter 3d math functions, apply linear transformations, 
+                            and move around in three dimensional space.
+                        </div>
+                        <div class="grid-date">
+                            4/26/24
+                        </div>
+                    </div>
+    
+                    <div class="grid-item">
+                       <div class="grid-img" style="background: url(photos/bike-thumbnail.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.instagram.com/p/C9zrgpbOxxt/"><img src="photos/icons8-instagram-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=go6uu9Ayvf0&lc=Ugz2xJzWBXGgERBtQPt4AaABAg"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            a film about biking
+                        </span>
+                        <div class="grid-text">
+                            my first film! a retro short film about a bike ride i took capturing scenes of nature, shot with an iphone & edited using lumetri color.
+                        </div>
+                        <div class="grid-date">
+                            7/24/24
+                        </div>
+                    </div>
+    
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/missilepathfinding.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            pathfinding simulation
+                        </span>
+                        <div class="grid-text">
+                            player moves around as a tank trying to shoot moving enemies around obstacles. incorporates
+                            a raymarching pathfinding algorithm.
+                        </div>
+                        <div class="grid-date">
+                            3/24/24
+                        </div>
+                    </div>
+                   
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/beach.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PJ-Kim-Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a href="#content"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            pj kim website
+                        </span>
+                        <div class="grid-text">
+                            dynamic website that features info about me, my projects, and a newsletter subscription. made from 
+                            scratch using html/css/js & node.js
+                        </div>
+                        <div class="grid-date">
+                            current
+                        </div>
+                    </div>
+    
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PDL_Problem_Bank_Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://pj1229.github.io/PDL_Problem_Bank_Website/"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            problem bank submission
+                        </span>
+                        <div class="grid-text">
+                            community members submit problems for plymouth district library teen stem members to solve using the 
+                            resources from the upper level lab.
+                        </div>
+                        <div class="grid-date">
+                            7/11/24
+                        </div>
+                    </div>
+                </div>
+-->
