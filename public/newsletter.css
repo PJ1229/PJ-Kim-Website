@@ -44,12 +44,24 @@
   text-align: center; font-size: 16px; height: 48px; background-color: rgba(0,0,0,.25); color: white;
 }
 
+.selected-button-mobile{
+  background-color: white; color: black; font-size: 42px; position: absolute; top: 144px;
+}
+
 .button{
   text-align: center; height: 48px; background-color: rgba(0,0,0,0);
 }
 
+.button-mobile{
+  background-color: white; color: rgba(0,0,0,.25); font-size: 42px; position: absolute; top: 144px;
+}
+
 .button-link{
   text-decoration: none; color: black; font-size: 16px; padding-top: 16px; padding-bottom: 16px;
+}
+
+.button-link-mobile{
+  text-decoration: none; color: rgba(0,0,0,.25); font-size: 42px; padding-top: 16px; padding-bottom: 16px;
 }
 
 .subscribe{
@@ -60,12 +72,16 @@
   background-color: rgba(191,191,191,255); color: white;
 }
 
+.subscribe-mobile{
+  position: absolute; right: 64px; top: 48px; height: 64px; width: auto; background-color: rgba(0,0,0,.25); color: white; font-size: 36px; border-radius: 4px; padding-left: 20px; padding-right: 20px; outline:2px solid rgba(191,191,191,255);
+}
+
 .title{
   width: 100%; text-align: center; font-size: 30px; background-color: transparent; color: rgba(0,0,0,1); margin-top: 22px;
 }
 
 .title-mobile{
-  font-size: 48px; top: 48px; left: 144px; position: absolute;
+  font-size: 48px; top: 48px; left: 144px; position: absolute; color: black;
 }
 
 .home{
