@@ -15,7 +15,7 @@ function handleSubmit(event) {
     })
     .then(response => response.text())
     .then(data => {
-        location.replace("index.html"); //change to newsletter.html once finished
+        location.replace("newsletter.html"); //change to newsletter.html once finished
     })
     .catch(error => {
         console.error('Error:', error);
