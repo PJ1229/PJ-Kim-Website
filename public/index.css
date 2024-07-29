@@ -74,10 +74,10 @@
 
 .grid-link-mobile{
     text-align: left;
-    width: auto; 
+    width: 100px; 
     background-color: white;
     outline: 2px solid black;
-    margin-top: -25vw; height: 80px;
+    margin-top: -25vw; height: 100px;
 }
 
 .grid-header{
