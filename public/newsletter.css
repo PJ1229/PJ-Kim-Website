@@ -45,7 +45,7 @@
 }
 
 .selected-button-mobile{
-  background-color: white; color: black; font-size: 42px; position: absolute; top: 156px;
+  background-color: transparent; color: black; font-size: 42px; position: absolute; top: 156px;
 }
 
 .button{
