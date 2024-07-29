@@ -12,6 +12,11 @@
     text-align: left;
 }
 
+.archive-button{
+  display: flex; align-items: center; justify-content: flex-start; text-align: left; margin-left: 10vw; margin-right: 10vw; width: 80vw; margin-top: 24px; margin-bottom: 24px; padding-left: 24px; padding-bottom: 24px; padding-right: 24px;
+}
+
+
 .link{
   text-decoration: none; color:#1e90ff;
 }
