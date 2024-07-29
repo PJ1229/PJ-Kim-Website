@@ -69,21 +69,21 @@
         <section class="mobile">
             <!-- mail -->
             <a target="_blank" href="mailto:peterjoe2005@gmail.com">
-                <button class="icon" style="height: 60.75px; bottom: 255px; left: 15.5px">
+                <button class="icon" style="height: 81px; bottom: 255px; left: 19px">
                     <img src="photos/icons8-mail-100.png" style="width: auto; height: 100%; filter: invert(1);">
                 </button>
             </a>
     
             <!-- insta -->
             <a target="_blank" href="https://www.instagram.com/pj.k1m/">
-                <button class="icon" style="height: 78.75px; bottom: 135px; left: 7px">
+                <button class="icon" style="height: 105px; bottom: 135px; left: 7px">
                     <img src="photos/icons8-instagram-120.png" style="width: auto; height: 100%; filter: invert(1);">
                 </button>
             </a>
     
             <!-- linkedin -->
             <a target="_blank" href="https://www.linkedin.com/in/peter-kim-34719126b/">
-                <button class="icon" style="height: 78.75px; bottom: 15px; left: 7px">
+                <button class="icon" style="height: 105px; bottom: 15px; left: 7px">
                     <img src="photos/icons8-linkedin-120.png" style="width: auto; height: 100%; filter: invert(1);">
                 </button>
             </a>
@@ -130,9 +130,10 @@
     
                 <!-- buttons -->
                 <div style="height: 101vh; width: 100%; background-color: black; position: absolute; top: 49vh; padding-top: 14vh; margin-top: -5vh; z-index: 3;">
-                    <h1 style="color: white; margin-top: 0; margin-left: 10vw; font-size: 48px;">heres some stuff about me:</h1>
-
-                    <p style="color: white; font-size: 1.8vh; margin-left: 10vw; margin-top: 24px; width: 55vw; height: 80vh; min-width: 300px;">
+                    
+                    <h1 class="desktop" style="color: white; margin-top: -2.5vh; margin-left: 10vw; font-size: 48px; position: absolute;">heres some stuff about me:</h1>
+                    <h1 class="mobile" style="color: white; margin-top: -2.5vh; margin-left: 10vw; font-size: 62px; position: absolute;">heres some stuff about me:</h1>
+                    <p style="color: white; font-size: 1.8vh; margin-left: 10vw; margin-top: 48px; width: 55vw; height: 80vh; min-width: 300px;">
                         im 18 years old.<br>
                         <br>
                         i love math, engineering, and cs. 
@@ -187,87 +188,145 @@
             </div>
         </section>
 
-        <section style="min-height: 100vh; height: 125vw; background-color: white; padding-top: 20vh; margin-top: -20vh; z-index: -3;" id="projects">
-            <h1 style="padding-top: 4vw; font-size: 48px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -20vh;">my favorite pieces</h1>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="grid-img" style="background: url(photos/projects.png) no-repeat center; background-size: 28vw 28vw;"></div>
-                    <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
-                    <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=iKKHzpIKJgA&t=37s"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
-                    <span class="grid-header">
-                        3d space renderer
-                    </span>
-                    <div class="grid-text">
-                        interactive software that allows users to enter 3d math functions, apply linear transformations, 
-                        and move around in three dimensional space.
+        <section style="min-height: 100vh; height: 125vw; background-color: white; padding-top: 20vh; margin-top: -20vh; z-index: -3; position: absolute;" id="projects">
+            
+            <div class="desktop">
+                <h1 style="padding-top: 4vw; font-size: 48px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -20vh; position: absolute; width: 50vw;">my favorite pieces</h1>
+            </div>
+            <div class="mobile">
+                <h1 style="padding-top: 4vw; font-size: 72px; padding-left: 5vw; padding-bottom: 2vw; margin-top: -15vh; position: absolute; width: 75vw;">my favorite pieces</h1>
+            </div>
+            
+            <div class="desktop">
+                <div class="grid-container" style="position: absolute;">
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/projects.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=iKKHzpIKJgA&t=37s"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            3d space renderer
+                        </span>
+                        <div class="grid-text">
+                            interactive software that allows users to enter 3d math functions, apply linear transformations, 
+                            and move around in three dimensional space.
+                        </div>
+                        <div class="grid-date">
+                            4/26/24
+                        </div>
                     </div>
-                    <div class="grid-date">
-                        4/26/24
+                    <div class="grid-item">
+                       <div class="grid-img" style="background: url(photos/bike-thumbnail.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.instagram.com/p/C9zrgpbOxxt/"><img src="photos/icons8-instagram-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=go6uu9Ayvf0&lc=Ugz2xJzWBXGgERBtQPt4AaABAg"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            a film about biking
+                        </span>
+                        <div class="grid-text">
+                            my first film! a retro short film about a bike ride i took capturing scenes of nature, shot with an iphone & edited using lumetri color.
+                        </div>
+                        <div class="grid-date">
+                            7/24/24
+                        </div>
                     </div>
-                </div>
-
-                <div class="grid-item">
-                   <div class="grid-img" style="background: url(photos/bike-thumbnail.png) no-repeat center; background-size: 28vw 28vw;"></div>
-                    <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.instagram.com/p/C9zrgpbOxxt/"><img src="photos/icons8-instagram-120.png" style="height: 48px;"></a></div>
-                    <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://www.youtube.com/watch?v=go6uu9Ayvf0&lc=Ugz2xJzWBXGgERBtQPt4AaABAg"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
-                    <span class="grid-header">
-                        a film about biking
-                    </span>
-                    <div class="grid-text">
-                        my first film! a retro short film about a bike ride i took capturing scenes of nature, shot with an iphone & edited using lumetri color.
+    
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/missilepathfinding.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            pathfinding simulation
+                        </span>
+                        <div class="grid-text">
+                            player moves around as a tank trying to shoot moving enemies around obstacles. incorporates
+                            a raymarching pathfinding algorithm.
+                        </div>
+                        <div class="grid-date">
+                            3/24/24
+                        </div>
                     </div>
-                    <div class="grid-date">
-                        7/24/24
+                   
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/beach.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PJ-Kim-Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a href="#content"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            pj kim website
+                        </span>
+                        <div class="grid-text">
+                            dynamic website that features info about me, my projects, and a newsletter subscription. made from 
+                            scratch using html/css/js & node.js
+                        </div>
+                        <div class="grid-date">
+                            current
+                        </div>
                     </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="grid-img" style="background: url(photos/missilepathfinding.png) no-repeat center; background-size: 28vw 28vw;"></div>
-                    <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><img src="photos/icons8-youtube-100.png" style="height: 48px;"></a></div>
-                    <span class="grid-header">
-                        pathfinding simulation
-                    </span>
-                    <div class="grid-text">
-                        player moves around as a tank trying to shoot moving enemies around obstacles. incorporates
-                        a raymarching pathfinding algorithm.
-                    </div>
-                    <div class="grid-date">
-                        3/24/24
-                    </div>
-                </div>
-               
-                <div class="grid-item">
-                    <div class="grid-img" style="background: url(photos/beach.png) no-repeat center; background-size: 28vw 28vw;"></div>
-                    <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PJ-Kim-Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
-                    <div class="grid-link" style="margin-left: 50px"><a href="#content"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
-                    <span class="grid-header">
-                        pj kim website
-                    </span>
-                    <div class="grid-text">
-                        dynamic website that features info about me, my projects, and a newsletter subscription. made from 
-                        scratch using html/css/js & node.js
-                    </div>
-                    <div class="grid-date">
-                        current
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="grid-img" style="background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div>
-                    <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PDL_Problem_Bank_Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
-                    <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://pj1229.github.io/PDL_Problem_Bank_Website/"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
-                    <span class="grid-header">
-                        problem bank submission
-                    </span>
-                    <div class="grid-text">
-                        community members submit problems for plymouth district library teen stem members to solve using the 
-                        resources from the upper level lab.
-                    </div>
-                    <div class="grid-date">
-                        7/11/24
+    
+                    <div class="grid-item">
+                        <div class="grid-img" style="background: url(photos/legos.png) no-repeat center; background-size: 28vw 28vw;"></div>
+                        <div class="grid-link" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PDL_Problem_Bank_Website"><img src="photos/icons8-github-120.png" style="height: 48px;"></a></div>
+                        <div class="grid-link" style="margin-left: 50px"><a target="_blank" href="https://pj1229.github.io/PDL_Problem_Bank_Website/"><img src="photos/icons8-website-100.png" style="height: 48px;"></a></div>
+                        <span class="grid-header">
+                            problem bank submission
+                        </span>
+                        <div class="grid-text">
+                            community members submit problems for plymouth district library teen stem members to solve using the 
+                            resources from the upper level lab.
+                        </div>
+                        <div class="grid-date">
+                            7/11/24
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            
+
+            <div class="mobile">
+                <div class="grid-container" style="position: absolute; grid-template-columns: auto; margin-top: -5vh;">
+                    <div class="grid-item">
+                        <div class="grid-img-mobile" style="background: url(photos/projects.png) no-repeat center;"></div>
+                        <div class="grid-link-mobile" style="margin-left: 0px;"><a target="_blank" href="https://github.com/PJ1229/3D-Rendering-Software-SFML"><img src="photos/icons8-github-120.png" style="height: 80px;"></a></div>
+                        <div class="grid-link-mobile" style="margin-left: 80px;"><a target="_blank" href="https://www.youtube.com/watch?v=iKKHzpIKJgA&t=37s"><img src="photos/icons8-youtube-100.png" style="height: 80px;"></a></div>
+                        <span class="grid-header-mobile">
+                            3d space renderer
+                        </span>
+                    </div>
+                    <div class="grid-item">
+                       <div class="grid-img-mobile" style="background: url(photos/bike-thumbnail.png) no-repeat center;"></div>
+                        <div class="grid-link-mobile" style="margin-left: 0px"><a target="_blank" href="https://www.instagram.com/p/C9zrgpbOxxt/"><img src="photos/icons8-instagram-120.png" style="height: 80px;"></a></div>
+                        <div class="grid-link-mobile" style="margin-left: 80px"><a target="_blank" href="https://www.youtube.com/watch?v=go6uu9Ayvf0&lc=Ugz2xJzWBXGgERBtQPt4AaABAg"><img src="photos/icons8-youtube-100.png" style="height: 80px;"></a></div>
+                        <span class="grid-header-mobile">
+                            a film about biking
+                        </span>
+                    </div>
+    
+                    <div class="grid-item">
+                        <div class="grid-img-mobile" style="background: url(photos/missilepathfinding.png) no-repeat center; background-size: cover;"></div>
+                        <div class="grid-link-mobile" style="margin-left: 0px"><a target="_blank" href="https://www.youtube.com/watch?v=AyyewS0l8y8"><img src="photos/icons8-youtube-100.png" style="height: 80px;"></a></div>
+                        <span class="grid-header-mobile">
+                            pathfinding game
+                        </span>
+                    </div>
+                   
+                    <div class="grid-item">
+                        <div class="grid-img-mobile" style="background: url(photos/beach.png) no-repeat center; background-size: cover;"></div>
+                        <div class="grid-link-mobile" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PJ-Kim-Website"><img src="photos/icons8-github-120.png" style="height: 80px;"></a></div>
+                        <div class="grid-link-mobile" style="margin-left: 80px"><a href="#content"><img src="photos/icons8-website-100.png" style="height: 80px;"></a></div>
+                        <span class="grid-header-mobile">
+                            pj kim website
+                        </span>
+                    </div>
+    
+                    <div class="grid-item">
+                        <div class="grid-img-mobile" style="background: url(photos/legos.png) no-repeat center; background-size: cover;"></div>
+                        <div class="grid-link-mobile" style="margin-left: 0px"><a target="_blank" href="https://github.com/PJ1229/PDL_Problem_Bank_Website"><img src="photos/icons8-github-120.png" style="height: 80px;"></a></div>
+                        <div class="grid-link-mobile" style="margin-left: 80px"><a target="_blank" href="https://pj1229.github.io/PDL_Problem_Bank_Website/"><img src="photos/icons8-website-100.png" style="height: 80px;"></a></div>
+                        <span class="grid-header-mobile">
+                            problem bank
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </div>
 

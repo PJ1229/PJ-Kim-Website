@@ -56,7 +56,11 @@
     outline: 2px solid black;
     width: 42.5vw; 
     height: 30vw;
-    background-size: 28vw 28vw;
+}
+
+.grid-img-mobile{
+    outline: 2px solid black;
+    width: 90vw; height: 25vw;
 }
 
 .grid-link{
@@ -68,6 +72,14 @@
     outline: 2px solid black;
 }
 
+.grid-link-mobile{
+    text-align: left;
+    width: auto; 
+    background-color: white;
+    outline: 2px solid black;
+    margin-top: -25vw; height: 80px;
+}
+
 .grid-header{
     font-style:italic; 
     font-size: 24px; 
@@ -75,6 +87,16 @@
     padding-bottom: 10px; 
     margin-top: 5px;
     width: 42.5vw; 
+}
+
+.grid-header-mobile{
+    font-size: 48px;
+    font-style:italic; 
+    font-weight: bold; 
+    padding-bottom: 10px; 
+    margin-top: 5px;
+    width: 100%;
+    text-align: center; 
 }
 
 .grid-text{
