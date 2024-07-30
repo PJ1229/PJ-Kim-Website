@@ -182,6 +182,10 @@
     border-left: 130vw solid black;
 }
 
+.no-scroll {
+    overflow: hidden;
+  }
+
 #loading-screen {
     position: fixed;
     width: 100%;
