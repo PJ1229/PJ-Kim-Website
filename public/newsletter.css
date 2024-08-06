@@ -188,6 +188,13 @@ li {
   }
 }
 
+/* Ensure the containers have appropriate overflow */
+#entries, #entries-mobile {
+  overflow: auto;
+  min-height: 100vh; /* Ensure each section takes up at least one viewport height */
+  padding: 16px;
+}
+
 /* Mobile styles */
 #entries-mobile {
   ul {
