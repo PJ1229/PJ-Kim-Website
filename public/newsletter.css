@@ -187,20 +187,3 @@ li {
       margin-bottom: 8px;
   }
 }
-
-/* Mobile styles */
-#entries-mobile {
-  ul {
-      margin-left: 12px;
-  }
-  
-  li {
-      font-size: 12px;
-      margin-left: 12px;
-      margin-bottom: 12px;
-  }
-  
-  ul ul {
-      margin-left: 6px;
-  }
-}

@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 "I spent a couple days learning about film; here are my notes.",
                 "I made a short film to help learn. <a target='_blank' href='https://www.youtube.com/watch?v=go6uu9Ayvf0'>Feel free to check it out!</a>",
                 "No matter how many filters I added to my videos, I could never get the vibe I wanted. The overexposed, warm, fuzzy vibe I got from old recordings or the emotional, vibrant, midnight vibes from A24 movies like <i>Waves</i> or <i>Moonlight</i>. Over the last few days, I spent some time learning how to edit my videos in post to add that extra level of <i>aesthetic</i> that filmmakers capture so well.",
-                "<u>Color Theory & Film</u><br><ul><li>complementary colors are typically used together to add contrast to the subject and the background</li><li>complementary colors can be found on opposite sides of the color wheel</li><li>creating a color palette in film includes 3 parts:<ul><li><i>set design & costumes</i></li><li><i>lighting</i></li><li><i>color grading</i></li></ul></li></ul>",
-                "<u>Color Correction in Adobe Premiere Pro</u><br><ul><li>color correction focuses on making images look realistic</li><li>color terminology:<ul><li><i>hue:</i> colors</li><li><i>saturation:</i> intensity of hue</li><li><i>luma:</i> brightness/shade of hue</li></ul></li><li>color correction workflow<ul><li>1. correct exposure</li><li>2. fix white balance</li><li>3. adjust saturation</li></ul></li></ul>",
-                "<u>Color Grading in Adobe Premiere Pro</u><br><ul><li>color grading adds style and emotion to the film</li><li>basic color grading workflow<ul><li>1. create an adjustment layer and place it over the video</li><li>2. use Lumetri Scopes to adjust color using curve</li><li>3. use adjustment layer to adjust multiple clips for a cohesive look</li></ul></li><li>types of color grades<ul><li><i>monochromatic:</i> single color with different shades</li><li><i>analogous:</i> colors next to each other on the color wheel</li><li><i>complementary:</i> colors opposite each other on the color wheel</li></ul></li></ul>",
-                "<u>Color Temperature</u><br><ul><li>color temperature measures warmth/coolness of a color</li><li>measured in kelvin (K)</li><li>higher values = cooler colors, lower values = warmer colors</li></ul>",
-                "<u>Film Types</u><br><ul><li><i>Monochrome:</i> black & white, shades of gray</li><li><i>Color Negative:</i> captures full color, processed to create a negative image</li><li><i>Color Reversal:</i> creates positive image on film</li><li><i>Infrared:</i> captures infrared light, unique visual effects</li></ul>",
+                "<u>Color Theory & Film</u><br><li>Complementary colors are typically used together to add contrast to the subject and the background.</li><li>Complementary colors can be found on opposite sides of the color wheel.</li><li>Creating a color palette in film includes 3 parts:<br><li><i>Set design & costumes</i></li><li><i>Lighting</i></li><li><i>Color grading</i></li></li>",
+                "<u>Color Correction in Adobe Premiere Pro</u><br><li>Color correction focuses on making images look realistic.</li><li>Color terminology:<br><li><i>Hue:</i> Colors.</li><li><i>Saturation:</i> Intensity of hue.</li><li><i>Luma:</i> Brightness/shade of hue.</li></li><li>Color correction workflow:<br><li>1. Correct exposure.</li><li>2. Fix white balance.</li><li>3. Adjust saturation.</li></li>",
+                "<u>Color Grading in Adobe Premiere Pro</u><br><li>Color grading adds style and emotion to the film.</li><li>Basic color grading workflow:<br><li>1. Create an adjustment layer and place it over the video.</li><li>2. Use Lumetri Scopes to adjust color using curve.</li><li>3. Use adjustment layer to adjust multiple clips for a cohesive look.</li></li><li>Types of color grades:<br><li><i>Monochromatic:</i> Single color with different shades.</li><li><i>Analogous:</i> Colors next to each other on the color wheel.</li><li><i>Complementary:</i> Colors opposite each other on the color wheel.</li></li>",
+                "<u>Color Temperature</u><br><li>Color temperature measures warmth/coolness of a color.</li><li>Measured in kelvin (K).</li><li>Higher values = cooler colors, lower values = warmer colors.</li>",
+                "<u>Film Types</u><br><li><i>Monochrome:</i> Black & white, shades of gray.</li><li><i>Color Negative:</i> Captures full color, processed to create a negative image.</li><li><i>Color Reversal:</i> Creates positive image on film.</li><li><i>Infrared:</i> Captures infrared light, unique visual effects.</li>",
                 "For a quick breakdown of what I’ve learned, complementary colors are typically used together to add contrast to the subject and the background. Creating a color palette in film includes three parts: set design & costumes, lighting, and color grading. Complementary colors can be found on opposite sides of the color wheel.",
                 "The way these elements are used in filmmaking is truly an art. I’ve only scratched the surface, and I am excited to learn more and continue experimenting with color in my own work.",
                 "I am always open to chatting about anything! Feel free to reach out if you have any questions or just want to talk film.",
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mobileParagraphs[i]) {
                     mobileParagraphs[i].innerHTML = entry.content[i];
                     mobileParagraphs[i].style.fontSize = '18px';  // Increase font size for mobile view
-                    mobileParagraphs[i].style.marginBottom = '36px'; // Add bottom margin
+                    mobileParagraphs[i].style.marginBottom = '18px'; // Add bottom margin
                 } else {
                     console.error(`Paragraph element ${i} not found`);
                 }
@@ -114,20 +114,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const mobileHeadings = mobileSection.querySelectorAll('h1');
             mobileHeadings.forEach(heading => {
                 heading.style.fontSize = '24px'; // Increase font size for h1
-                heading.style.marginBottom = '6px'; // Add bottom margin
             });
 
             const mobileSubHeadings = mobileSection.querySelectorAll('h2');
             mobileSubHeadings.forEach(subHeading => {
                 subHeading.style.fontSize = '18px'; // Increase font size for h2
-                subHeading.style.marginBottom = '18px'; // Add bottom margin
+                subHeading.style.marginBottom = '-18px'; // Add bottom margin
             });
 
             const mobileListItems = mobileSection.querySelectorAll('li');
             mobileListItems.forEach(listItem => {
                 listItem.style.fontSize = '18px'; // Increase font size for mobile list items
-                listItem.style.marginLeft = '18px'; // Add left margin for list items
-                listItem.style.marginBottom = '18px'; // Add bottom margin for list items
+                listItem.style.marginLeft = '12px'; // Add left margin for list items
+                listItem.style.marginBottom = '12px'; // Add bottom margin for list items
             });
 
             mobileEntriesContainer.appendChild(mobileClone);
