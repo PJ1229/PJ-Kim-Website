@@ -38,7 +38,6 @@ const entries = [
 ];
 
 
-
 function insertEntries() {
     const desktopEntriesContainer = document.getElementById('entries');
     const mobileEntriesContainer = document.getElementById('entries-mobile');
@@ -62,7 +61,7 @@ function insertEntries() {
             return;
         }
 
-        desktopSection.id = entry.id;
+        desktopSection.id = `desktop-${entry.id}`; // Ensure unique id for desktop
         desktopSection.querySelector('h1').innerHTML = entry.title;
         desktopSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
         desktopSection.querySelector('img').src = entry.imageSrc;
@@ -86,7 +85,7 @@ function insertEntries() {
             return;
         }
 
-        mobileSection.id = entry.id;
+        mobileSection.id = `mobile-${entry.id}`; // Ensure unique id for mobile
         mobileSection.querySelector('h1').innerHTML = entry.title;
         mobileSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
         mobileSection.querySelector('img').src = entry.imageSrc;
