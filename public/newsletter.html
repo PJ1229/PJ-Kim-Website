@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree">
     <link rel="stylesheet" href="newsletter.css">
 </head>
@@ -27,41 +25,57 @@
                 <button class="subscribe">Subscribe</button>
             </a>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 24px; margin-bottom: 0px;">
-            <div style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
-                <button class="selected-button" style="overflow: hidden;">Home</button>
-                <button class="button" style="overflow: hidden;"><a href="archive.html" class="button-link">Archive</a></button>
-                <button class="button" style="overflow: hidden;"><a href="about.html" class="button-link">About</a></button>
-            </div>
+            <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
+                <button class="selected-button">Home</button>
+                <button class="button"><a href="archive.html" class="button-link">Archive</a></button>
+                <button class="button"><a href="about.html" class="button-link">About</a></button>
+            </section>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 0px; margin-bottom: 50px;">
             
-            <div id="entries" style="min-width: 300px; padding-left: 10px; padding-right: 10px;">
-                <section id="desktop-2" style="max-width: 900px;"></section>
-                <section id="desktop-1" style="max-width: 900px;"></section>
-            </div>
+            <!-- Template for entries -->
+            <template id="entry-template" class="entries-container">
+                <section class="entry">
+                    <h1></h1>
+                    <p></p>
+                    <h2></h2>
+                    <img>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </section>
+            </template>
+            
+            <div id="entries"></div>
         </div>
+        
         <div class="mobile" style="position: absolute; top:0; width: 100%;">
+
             <a href="#content">
-                <button id="scrollButton" class="faded" style="position: fixed; bottom: 6px; left: 6px; background-color: transparent; transition: opacity 0.5s ease;">
-                    <img src="photos/icons8-home-100.png" style="width: 48px; filter: invert(.2);">
+                <button id="scrollButton" class="faded" style="position: fixed; bottom: 24px; left: 24px; background-color: transparent; transition: opacity 0.5s ease;">
+                    <img src="photos/icons8-home-100.png" style="width: 100px; filter: invert(.2);">
                 </button>
             </a>
             
             <a href="index.html" class="button-link">
-                <button class="home-mobile" style="left: 12px; top: 12px; width: 32px; height: 32px;"></button>
+                <button class="home-mobile"></button>
             </a>
-            <div class="title-mobile" style="top: 18px; font-size: 18px; left: 56px;">PJ's Newsletter</div>
+            <div class="title-mobile">PJ's Newsletter</div>
             <a href="subscription.html" class="button-link">
-                <button class="subscribe-mobile" style="font-size: 14px; padding-left: 6px; padding-right: 6px; height: 24px; top: 18px; right: 18px; border-radius: 1px;">Subscribe</button>
+                <button class="subscribe-mobile">Subscribe</button>
             </a>
-            <button class="selected-button-mobile" style="left: 6px; font-size: 16px; top: 60px">Home</button>
-            <button class="button-mobile" style="left: 70px; top: 36px; overflow: hidden;"><a href="archive.html" class="button-link-mobile" style="font-size: 16px;">Archive</a></button>
-            <button class="button-mobile" style="left: 150px; top: 36px; overflow: hidden;"><a href="about.html" class="button-link-mobile" style="font-size: 16px;">About</a></button>
-            <hr style="width: 100%; height: 1px; background-color: rgba(0,0,0,.25); position: absolute; top: 88px;">
-
-            <div id="entries-mobile" style="margin-top: 100px; padding-left: 10px; padding-right: 10px;">
-                <section id="mobile-2"></section>
-                <section id="mobile-1"></section>
-            </div>
+            <button class="selected-button-mobile" style="left: 24px;">Home</button>
+            <button class="button-mobile" style="left: 192px;"><a href="archive.html" class="button-link-mobile">Archive</a></button>
+            <button class="button-mobile" style="left: 390px;"><a href="about.html" class="button-link-mobile">About</a></button>
+            <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); position: absolute; top: 228px;">
+    
+            <div id="entries-mobile" style="margin-top: 300px;"></div>
         </div>
     </div>
 
