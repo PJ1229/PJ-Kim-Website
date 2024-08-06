@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 "As someone who lives and breathes engineering, researching the technical beauty of cameras was a joyful process. The mechanics and chemistry that elegantly unite to capture the light onto a layer of film makes me engrossed in learning more. As I mentioned previously, I just purchased a Panasonic LUMIX G100D, so look out for a newsletter reviewing it in the future.",
                 "Thanks for listening, I hope that this was somewhat informative. If you have any tips, ideas, comments, or concerns, feel free to reach out! I’d love to chat.",
                 "-PJ",
+                "",
+                "",
+                "",
+                "",
+                "",
                 ""
             ]
         },
@@ -36,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "The way these elements are used in filmmaking is truly an art. I’ve only scratched the surface, and I am excited to learn more and continue experimenting with color in my own work.",
                 "I am always open to chatting about anything! Feel free to reach out if you have any questions or just want to talk film.",
                 "-PJ",
+                "",
+                "",
                 ""
             ]
         }
