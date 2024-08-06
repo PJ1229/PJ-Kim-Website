@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < entry.content.length; i++) {
                 if (mobileParagraphs[i]) {
                     mobileParagraphs[i].innerHTML = entry.content[i];
-                    mobileParagraphs[i].style.fontSize = '48px';  // Increase font size for mobile view
-                    mobileParagraphs[i].style.marginBottom = '48px'; // Add bottom margin
+                    mobileParagraphs[i].style.fontSize = '18px';  // Increase font size for mobile view
+                    mobileParagraphs[i].style.marginBottom = '36px'; // Add bottom margin
                 } else {
                     console.error(`Paragraph element ${i} not found`);
                 }
@@ -113,21 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Distinguish between h1 and h2
             const mobileHeadings = mobileSection.querySelectorAll('h1');
             mobileHeadings.forEach(heading => {
-                heading.style.fontSize = '60px'; // Increase font size for h1
+                heading.style.fontSize = '24px'; // Increase font size for h1
                 heading.style.marginBottom = '6px'; // Add bottom margin
             });
 
             const mobileSubHeadings = mobileSection.querySelectorAll('h2');
             mobileSubHeadings.forEach(subHeading => {
-                subHeading.style.fontSize = '42px'; // Increase font size for h2
-                subHeading.style.marginBottom = '24px'; // Add bottom margin
+                subHeading.style.fontSize = '18px'; // Increase font size for h2
+                subHeading.style.marginBottom = '18px'; // Add bottom margin
             });
 
             const mobileListItems = mobileSection.querySelectorAll('li');
             mobileListItems.forEach(listItem => {
-                listItem.style.fontSize = '48px'; // Increase font size for mobile list items
-                listItem.style.marginLeft = '48px'; // Add left margin for list items
-                listItem.style.marginBottom = '12px'; // Add bottom margin for list items
+                listItem.style.fontSize = '18px'; // Increase font size for mobile list items
+                listItem.style.marginLeft = '18px'; // Add left margin for list items
+                listItem.style.marginBottom = '18px'; // Add bottom margin for list items
             });
 
             mobileEntriesContainer.appendChild(mobileClone);

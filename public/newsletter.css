@@ -140,7 +140,7 @@
 }
 
 .entry{
-  min-width: 500px; max-width: 900px; text-align: center; margin-bottom: 240px;
+  max-width: 900px; text-align: center; margin-bottom: 240px; max-width: 100%;
 }
 
 h1{
@@ -180,6 +180,7 @@ li {
 #entries {
   ul {
       margin-left: 24px;
+      padding-right: -24px;
   }
   
   li {
@@ -192,15 +193,18 @@ li {
 #entries-mobile {
   ul {
       margin-left: 48px;
+      padding-right: -48px;
   }
   
   li {
       font-size: 48px;
       margin-left: 48px;
+      padding-right: -48px;
       margin-bottom: 12px;
   }
   
   ul ul {
       margin-left: 24px;
+      padding-right: -24px;
   }
 }
