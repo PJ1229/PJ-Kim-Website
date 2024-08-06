@@ -6,6 +6,11 @@
 </head>
 
 <body>
+    <style>
+        *{
+            overflow-x: hidden;
+        }
+    </style>
     <div id="loading-screen">please wait loading ...</div>
     <div id="content">
         <div class="desktop" style="position: absolute; top:0; width: 100%;">
@@ -26,33 +31,14 @@
             </a>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 24px; margin-bottom: 0px;">
             <section style="display: flex; justify-content: center; align-items: center; text-align: center; width: 300px; height: 48px;">
-                <button class="selected-button">Home</button>
-                <button class="button"><a href="archive.html" class="button-link">Archive</a></button>
-                <button class="button"><a href="about.html" class="button-link">About</a></button>
+                <button class="selected-button" style="overflow: hidden;">Home</button>
+                <button class="button" style="overflow: hidden;"><a href="archive.html" class="button-link">Archive</a></button>
+                <button class="button" style="overflow: hidden;"><a href="about.html" class="button-link">About</a></button>
             </section>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); margin-top: 0px; margin-bottom: 50px;">
             
             <!-- Template for entries -->
-            <template id="entry-template" class="entries-container">
-                <section class="entry">
-                    <h1></h1>
-                    <p></p>
-                    <h2></h2>
-                    <img>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </section>
-            </template>
-            
-            <div id="entries"></div>
+            <div id="entries" style="min-width: 500px; max-width: 900px;"></div>
         </div>
         
         <div class="mobile" style="position: absolute; top:0; width: 100%;">
@@ -70,12 +56,12 @@
             <a href="subscription.html" class="button-link">
                 <button class="subscribe-mobile">Subscribe</button>
             </a>
-            <button class="selected-button-mobile" style="left: 24px;">Home</button>
-            <button class="button-mobile" style="left: 192px;"><a href="archive.html" class="button-link-mobile">Archive</a></button>
-            <button class="button-mobile" style="left: 390px;"><a href="about.html" class="button-link-mobile">About</a></button>
+            <button class="selected-button-mobile" style="left: 24px; overflow: hidden;">Home</button>
+            <button class="button-mobile" style="left: 192px; overflow: hidden;"><a href="archive.html" class="button-link-mobile">Archive</a></button>
+            <button class="button-mobile" style="left: 390px; overflow: hidden;"><a href="about.html" class="button-link-mobile">About</a></button>
             <hr style="width: 100%; height: 2px; background-color: rgba(0,0,0,.25); position: absolute; top: 228px;">
     
-            <div id="entries-mobile" style="margin-top: 300px;"></div>
+            <div id="entries-mobile" style="margin-top: 300px; padding-left: 24px; padding-right: 24px;"></div>
         </div>
     </div>
 

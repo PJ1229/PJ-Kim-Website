@@ -37,90 +37,99 @@ const entries = [
     }
 ];
 
-
 function insertEntries() {
     const desktopEntriesContainer = document.getElementById('entries');
     const mobileEntriesContainer = document.getElementById('entries-mobile');
-    const template = document.getElementById('entry-template');
 
-    if (!desktopEntriesContainer || !mobileEntriesContainer || !template) {
+    if (!desktopEntriesContainer || !mobileEntriesContainer) {
         console.error("One or more elements not found");
         return;
     }
-
-    const templateContent = template.content;
 
     entries.forEach(entry => {
         console.log(`Processing entry: ${entry.title}`);
 
         // Desktop
-        const desktopClone = document.importNode(templateContent, true);
-        const desktopSection = desktopClone.querySelector('section');
-        if (!desktopSection) {
-            console.error("Section element not found in template");
-            return;
+        const desktopSection = document.createElement('section');
+        desktopSection.id = `desktop-${entry.id}`;
+
+        const desktopTitle = document.createElement('h1');
+        desktopTitle.innerHTML = entry.title;
+        desktopSection.appendChild(desktopTitle);
+
+        // Add the first line of content below the title
+        if (entry.content.length > 0) {
+            const firstLine = document.createElement('p');
+            firstLine.innerHTML = entry.content[0];
+            firstLine.style.marginBottom = '24px'; // Space below the first line
+            desktopSection.appendChild(firstLine);
         }
 
-        desktopSection.id = `desktop-${entry.id}`; // Ensure unique id for desktop
-        desktopSection.querySelector('h1').innerHTML = entry.title;
-        desktopSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
-        desktopSection.querySelector('img').src = entry.imageSrc;
-        const paragraphs = desktopSection.querySelectorAll('p');
-        for (let i = 0; i < entry.content.length; i++) {
-            if (paragraphs[i]) {
-                paragraphs[i].innerHTML = entry.content[i];
-                paragraphs[i].style.marginBottom = '24px'; // Add bottom margin to paragraphs
-            } else {
-                console.error(`Paragraph element ${i} not found`);
-            }
-        }
+        const desktopDate = document.createElement('h2');
+        desktopDate.innerHTML = `- ${entry.date} - <br>`;
+        desktopSection.appendChild(desktopDate);
 
-        desktopEntriesContainer.appendChild(desktopClone);
+        const desktopImage = document.createElement('img');
+        desktopImage.src = entry.imageSrc;
+        desktopSection.appendChild(desktopImage);
+
+        // Add the remaining content after the image
+        entry.content.slice(1).forEach(content => {
+            const paragraph = document.createElement('p');
+            paragraph.innerHTML = content;
+            paragraph.style.marginBottom = '24px'; // Space below each paragraph
+            desktopSection.appendChild(paragraph);
+        });
+
+        desktopEntriesContainer.appendChild(desktopSection);
 
         // Mobile
-        const mobileClone = document.importNode(templateContent, true);
-        const mobileSection = mobileClone.querySelector('section');
-        if (!mobileSection) {
-            console.error("Section element not found in template");
-            return;
+        const mobileSection = document.createElement('section');
+        mobileSection.id = `mobile-${entry.id}`;
+
+        const mobileTitle = document.createElement('h1');
+        mobileTitle.innerHTML = entry.title;
+        mobileTitle.style.fontSize = '60px';
+        mobileTitle.style.marginBottom = '6px';
+        mobileSection.appendChild(mobileTitle);
+
+        // Add the first line of content below the title
+        if (entry.content.length > 0) {
+            const mobileFirstLine = document.createElement('p');
+            mobileFirstLine.innerHTML = entry.content[0];
+            mobileFirstLine.style.fontSize = '48px'; // Mobile font size
+            mobileFirstLine.style.marginBottom = '48px'; // Space below the first line
+            mobileSection.appendChild(mobileFirstLine);
         }
 
-        mobileSection.id = `mobile-${entry.id}`; // Ensure unique id for mobile
-        mobileSection.querySelector('h1').innerHTML = entry.title;
-        mobileSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
-        mobileSection.querySelector('img').src = entry.imageSrc;
-        const mobileParagraphs = mobileSection.querySelectorAll('p');
-        for (let i = 0; i < entry.content.length; i++) {
-            if (mobileParagraphs[i]) {
-                mobileParagraphs[i].innerHTML = entry.content[i];
-                mobileParagraphs[i].style.fontSize = '48px';  // Increase font size for mobile view
-                mobileParagraphs[i].style.marginBottom = '48px'; // Add bottom margin
-            } else {
-                console.error(`Paragraph element ${i} not found`);
-            }
-        }
+        const mobileDate = document.createElement('h2');
+        mobileDate.innerHTML = `- ${entry.date} - <br>`;
+        mobileDate.style.fontSize = '42px';
+        mobileDate.style.marginBottom = '24px';
+        mobileSection.appendChild(mobileDate);
 
-        // Distinguish between h1 and h2
-        const mobileHeadings = mobileSection.querySelectorAll('h1');
-        mobileHeadings.forEach(heading => {
-            heading.style.fontSize = '60px'; // Increase font size for h1
-            heading.style.marginBottom = '6px'; // Add bottom margin
+        const mobileImage = document.createElement('img');
+        mobileImage.src = entry.imageSrc;
+        mobileSection.appendChild(mobileImage);
+
+        // Add the remaining content after the image
+        entry.content.slice(1).forEach(content => {
+            const mobileParagraph = document.createElement('p');
+            mobileParagraph.innerHTML = content;
+            mobileParagraph.style.fontSize = '48px'; // Mobile font size
+            mobileParagraph.style.marginBottom = '48px'; // Space below each paragraph
+            mobileSection.appendChild(mobileParagraph);
         });
 
-        const mobileSubHeadings = mobileSection.querySelectorAll('h2');
-        mobileSubHeadings.forEach(subHeading => {
-            subHeading.style.fontSize = '42px'; // Increase font size for h2
-            subHeading.style.marginBottom = '24px'; // Add bottom margin
-        });
-
+        // Additional mobile styles for list items
         const mobileListItems = mobileSection.querySelectorAll('li');
         mobileListItems.forEach(listItem => {
-            listItem.style.fontSize = '48px'; // Increase font size for mobile list items
-            listItem.style.marginLeft = '48px'; // Add left margin for list items
-            listItem.style.marginBottom = '12px'; // Add bottom margin for list items
+            listItem.style.fontSize = '48px';
+            listItem.style.marginLeft = '48px';
+            listItem.style.marginBottom = '12px';
         });
 
-        mobileEntriesContainer.appendChild(mobileClone);
+        mobileEntriesContainer.appendChild(mobileSection);
     });
 }
 
