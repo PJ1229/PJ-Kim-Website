@@ -187,3 +187,13 @@ li {
       margin-bottom: 8px;
   }
 }
+
+#content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#entries, #entries-mobile{
+  width: 100%;
+  box-sizing: border-box;
+}
