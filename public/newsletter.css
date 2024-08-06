@@ -10,7 +10,30 @@
     /* Text */
     text-wrap: wrap;
     text-align: left;
+
+    scroll-behavior: smooth;
 }
+
+/* CSS for fading in and out */
+.faded {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+
+#scrollToTopButton {
+  transition: opacity 0.5s ease;
+}
+
+
+#scrollToTopButton.show {
+  opacity: 1;
+}
+
+
 
 .archive-button{
   display: flex; align-items: center; justify-content: flex-start; text-align: left; margin-left: 10vw; margin-right: 10vw; width: 80vw; margin-top: 24px; margin-bottom: 24px; padding-left: 24px; padding-bottom: 24px; padding-right: 24px;
@@ -117,7 +140,7 @@
 }
 
 .entry{
-  min-width: 500px; max-width: 900px; text-align: center;
+  min-width: 500px; max-width: 900px; text-align: center; margin-bottom: 240px;
 }
 
 h1{
