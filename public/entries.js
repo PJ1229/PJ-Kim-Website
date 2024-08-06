@@ -120,9 +120,6 @@ function insertEntries() {
             listItem.style.marginBottom = '12px'; // Add bottom margin for list items
         });
 
-        // Add top margin to mobile section
-        mobileSection.style.marginTop = '300px';
-
         mobileEntriesContainer.appendChild(mobileClone);
     });
 }
