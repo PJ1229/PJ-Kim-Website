@@ -37,92 +37,93 @@ const entries = [
     }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+    function insertEntries() {
+        const desktopEntriesContainer = document.getElementById('entries');
+        const mobileEntriesContainer = document.getElementById('entries-mobile');
+        const template = document.getElementById('entry-template');
 
-function insertEntries() {
-    const desktopEntriesContainer = document.getElementById('entries');
-    const mobileEntriesContainer = document.getElementById('entries-mobile');
-    const template = document.getElementById('entry-template');
+        if (!desktopEntriesContainer || !mobileEntriesContainer || !template) {
+            console.error("One or more elements not found");
+            return;
+        }
 
-    if (!desktopEntriesContainer || !mobileEntriesContainer || !template) {
-        console.error("One or more elements not found");
-        return;
+        const templateContent = template.content;
+
+        entries.forEach(entry => {
+            console.log(`Processing entry: ${entry.title}`);
+
+            // Desktop
+            const desktopClone = document.importNode(templateContent, true);
+            const desktopSection = desktopClone.querySelector('section');
+            if (!desktopSection) {
+                console.error("Section element not found in template");
+                return;
+            }
+
+            desktopSection.id = `desktop-${entry.id}`; // Ensure unique id for desktop
+            desktopSection.querySelector('h1').innerHTML = entry.title;
+            desktopSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
+            desktopSection.querySelector('img').src = entry.imageSrc;
+            const paragraphs = desktopSection.querySelectorAll('p');
+            for (let i = 0; i < entry.content.length; i++) {
+                if (paragraphs[i]) {
+                    paragraphs[i].innerHTML = entry.content[i];
+                    paragraphs[i].style.marginBottom = '24px'; // Add bottom margin to paragraphs
+                } else {
+                    console.error(`Paragraph element ${i} not found`);
+                }
+            }
+
+            desktopEntriesContainer.appendChild(desktopClone);
+
+            // Mobile
+            const mobileClone = document.importNode(templateContent, true);
+            const mobileSection = mobileClone.querySelector('section');
+            if (!mobileSection) {
+                console.error("Section element not found in template");
+                return;
+            }
+
+            mobileSection.id = `mobile-${entry.id}`; // Ensure unique id for mobile
+            mobileSection.querySelector('h1').innerHTML = entry.title;
+            mobileSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
+            mobileSection.querySelector('img').src = entry.imageSrc;
+            const mobileParagraphs = mobileSection.querySelectorAll('p');
+            for (let i = 0; i < entry.content.length; i++) {
+                if (mobileParagraphs[i]) {
+                    mobileParagraphs[i].innerHTML = entry.content[i];
+                    mobileParagraphs[i].style.fontSize = '48px';  // Increase font size for mobile view
+                    mobileParagraphs[i].style.marginBottom = '48px'; // Add bottom margin
+                } else {
+                    console.error(`Paragraph element ${i} not found`);
+                }
+            }
+
+            // Distinguish between h1 and h2
+            const mobileHeadings = mobileSection.querySelectorAll('h1');
+            mobileHeadings.forEach(heading => {
+                heading.style.fontSize = '60px'; // Increase font size for h1
+                heading.style.marginBottom = '6px'; // Add bottom margin
+            });
+
+            const mobileSubHeadings = mobileSection.querySelectorAll('h2');
+            mobileSubHeadings.forEach(subHeading => {
+                subHeading.style.fontSize = '42px'; // Increase font size for h2
+                subHeading.style.marginBottom = '24px'; // Add bottom margin
+            });
+
+            const mobileListItems = mobileSection.querySelectorAll('li');
+            mobileListItems.forEach(listItem => {
+                listItem.style.fontSize = '48px'; // Increase font size for mobile list items
+                listItem.style.marginLeft = '48px'; // Add left margin for list items
+                listItem.style.marginBottom = '12px'; // Add bottom margin for list items
+            });
+
+            mobileEntriesContainer.appendChild(mobileClone);
+        });
     }
 
-    const templateContent = template.content;
-
-    entries.forEach(entry => {
-        console.log(`Processing entry: ${entry.title}`);
-
-        // Desktop
-        const desktopClone = document.importNode(templateContent, true);
-        const desktopSection = desktopClone.querySelector('section');
-        if (!desktopSection) {
-            console.error("Section element not found in template");
-            return;
-        }
-
-        desktopSection.id = `desktop-${entry.id}`; // Ensure unique id for desktop
-        desktopSection.querySelector('h1').innerHTML = entry.title;
-        desktopSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
-        desktopSection.querySelector('img').src = entry.imageSrc;
-        const paragraphs = desktopSection.querySelectorAll('p');
-        for (let i = 0; i < entry.content.length; i++) {
-            if (paragraphs[i]) {
-                paragraphs[i].innerHTML = entry.content[i];
-                paragraphs[i].style.marginBottom = '24px'; // Add bottom margin to paragraphs
-            } else {
-                console.error(`Paragraph element ${i} not found`);
-            }
-        }
-
-        desktopEntriesContainer.appendChild(desktopClone);
-
-        // Mobile
-        const mobileClone = document.importNode(templateContent, true);
-        const mobileSection = mobileClone.querySelector('section');
-        if (!mobileSection) {
-            console.error("Section element not found in template");
-            return;
-        }
-
-        mobileSection.id = `mobile-${entry.id}`; // Ensure unique id for mobile
-        mobileSection.querySelector('h1').innerHTML = entry.title;
-        mobileSection.querySelector('h2').innerHTML = `- ${entry.date} - <br>`;
-        mobileSection.querySelector('img').src = entry.imageSrc;
-        const mobileParagraphs = mobileSection.querySelectorAll('p');
-        for (let i = 0; i < entry.content.length; i++) {
-            if (mobileParagraphs[i]) {
-                mobileParagraphs[i].innerHTML = entry.content[i];
-                mobileParagraphs[i].style.fontSize = '48px';  // Increase font size for mobile view
-                mobileParagraphs[i].style.marginBottom = '48px'; // Add bottom margin
-            } else {
-                console.error(`Paragraph element ${i} not found`);
-            }
-        }
-
-        // Distinguish between h1 and h2
-        const mobileHeadings = mobileSection.querySelectorAll('h1');
-        mobileHeadings.forEach(heading => {
-            heading.style.fontSize = '60px'; // Increase font size for h1
-            heading.style.marginBottom = '6px'; // Add bottom margin
-        });
-
-        const mobileSubHeadings = mobileSection.querySelectorAll('h2');
-        mobileSubHeadings.forEach(subHeading => {
-            subHeading.style.fontSize = '42px'; // Increase font size for h2
-            subHeading.style.marginBottom = '24px'; // Add bottom margin
-        });
-
-        const mobileListItems = mobileSection.querySelectorAll('li');
-        mobileListItems.forEach(listItem => {
-            listItem.style.fontSize = '48px'; // Increase font size for mobile list items
-            listItem.style.marginLeft = '48px'; // Add left margin for list items
-            listItem.style.marginBottom = '12px'; // Add bottom margin for list items
-        });
-
-        mobileEntriesContainer.appendChild(mobileClone);
-    });
-}
-
-// Call the function to insert entries
-insertEntries();
+    // Call the function to insert entries
+    insertEntries();
+});
